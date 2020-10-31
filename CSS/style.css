@@ -1,0 +1,361 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Turret+Road&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: #666;
+    font-family: 'Roboto', sans-serif;
+    font-size: 10px;
+    max-width: 1200px;
+    margin: auto;
+    background-image: url(../images/drinki.jpg);
+    background-size: cover;
+    background-position-x: 800px;
+    /* background-position-x: left; */
+    /* background-attachment: fixed; */
+}
+
+body {
+    min-width: 600px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+
+}
+
+header,
+main,
+footer {
+    background-color: whitesmoke;
+}
+
+header,
+main,
+footer,
+nav {
+    margin: 1rem;
+}
+
+header,
+footer {
+    background-color: rgb(45, 76, 170);
+    color: white;
+    padding: 1rem;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+header h1 {
+    display: flex;
+    flex-grow: 5;
+    text-align: center;
+    font-size: 3rem;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    font-family: 'Turret Road', cursive;
+
+}
+
+header img {
+    width: 100px;
+    height: auto;
+    flex-grow: 1;
+}
+
+nav {
+    background-color: #bdc3c7;
+}
+
+nav ul {
+    padding: 0;
+    overflow: hidden;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li {
+    flex-grow: 1;
+    background-color: rgb(168, 235, 185);
+    text-align: center;
+    transition: .3s;
+    position: relative;
+    overflow: hidden;
+}
+
+nav ul li a {
+    /* display: inline-block; */
+    color: #2c3e50;
+    padding: 1rem 2rem;
+    font-size: 2.5rem;
+    text-decoration: none;
+    /* background-color: #ddd; */
+    transition: .5s;
+
+}
+
+nav ul li::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 10px;
+    background-color: darkslategrey;
+    transform: translateY(-50%);
+    top: 50%;
+    left: 100%;
+    transition: left 0.2s, height 0.1s 0.2s;
+    z-index: -1;
+}
+
+nav ul li:hover::after {
+    left: 0;
+    height: 102%;
+
+    /* background-color: royalblue;
+    color: whitesmoke; */
+}
+
+nav ul li:hover {
+    color: whitesmoke;
+    z-index: 2;
+}
+
+nav ul li:hover a {
+    color: whitesmoke;
+}
+
+/* nav ul li:hover {
+    background-color: royalblue;
+} */
+
+.active {
+    background-color: gray;
+    color: whitesmoke;
+}
+
+.active a {
+    color: whitesmoke;
+}
+
+main {
+    font-size: 2rem;
+    padding: 1.5rem;
+    background-color: gainsboro;
+    flex-grow: 1;
+}
+
+label span {
+    color: red;
+}
+
+footer {
+    text-align: center;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    font-size: 1.3rem;
+}
+
+main h2 {
+    border-bottom: 2px solid #aaa;
+    margin-bottom: 2rem;
+}
+
+/* ==================================================================== */
+/* ====================================================================== */
+/* dla tabelek */
+
+.table-list {
+    border-collapse: collapse;
+    color: #2c3e50;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.table-list,
+.table-list th,
+.table-list td {
+    border: 2px solid #ecf0f1;
+}
+
+.table-list th,
+.table-list td {
+    padding: 0.5rem;
+}
+
+.table-list th,
+.table-list tbody tr:nth-child(even) {
+    background-color: #467ee6;
+    color: white;
+}
+
+.list-actions {
+    margin: 0;
+    text-align: center;
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+}
+
+.list-actions li {
+    flex-grow: 1;
+    /* text-decoration:none ; */
+    /* display: inline-block; */
+}
+
+.details,
+.edit,
+.delete,
+.button-add,
+.form-button-submit,
+.form-button-cancel {
+    border: none;
+    border-radius: 5px;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    padding: 0 20px;
+    transition: .3s;
+    /* font-size: 0.8rem; */
+}
+
+.details {
+    background-color: yellow;
+
+}
+
+.edit {
+    background-color: greenyellow;
+}
+
+.delete {
+    background-color: brown;
+}
+
+.details:hover {
+    background-color: rgb(155, 155, 9);
+}
+
+.edit:hover {
+    background-color: rgb(108, 160, 29);
+}
+
+.delete:hover {
+    background-color: rgb(83, 23, 23);
+}
+
+a .button-add {
+    margin-top: 50px;
+    ;
+    padding: 1.2rem 1rem;
+    background-color: #27ae60;
+}
+
+
+.button-add:hover {
+    background-color: #2ecc71;
+}
+
+/* 
+=============================================
+=============================================
+formularz nowego rekordu */
+button,
+input,
+select,
+textarea {
+    font-family: 'Roboto';
+    font-size: 100%;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+textarea {
+    overflow: auto;
+}
+
+.form {
+    margin-left: 2rem;
+    width: 300px;
+}
+
+
+.form select,
+.form input[type="text"],
+.form input[type="number"],
+.form input[type="date"],
+.form input[type="email"] {
+    border: 1px solid #7f8c8d;
+    color: #2c3e50;
+    border-radius: 5px;
+    padding: 0.5rem;
+    width: 100%;
+}
+
+.form label {
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+abbr[title='required'] {
+    color: #c0392b;
+}
+
+.form-buttons {
+    margin-top: 2rem;
+}
+
+.button-add,
+.form-button-submit,
+.form-button-cancel {
+    padding: 0.5rem 1rem;
+}
+
+.button-add,
+.form-button-submit {
+    background-color: #27ae60;
+}
+
+.button-add:hover,
+.form-button-submit:hover {
+    background-color: #2ecc71;
+}
+
+.form-button-cancel,
+.list-actions-button-delete {
+    background-color: #c0392b;
+}
+
+.form-button-cancel:hover,
+.list-actions-button-delete:hover {
+    background-color: #e74c3c;
+}
+
+.form-button-cancel {
+    box-sizing: border-box;
+    display: block;
+}
+
+.form-button-submit,
+.form-button-cancel {
+    width: 100%;
+}
+
+.form-button-submit {
+    margin-bottom: 0.5rem;
+}

@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../CSS/style.css">
 </head>
 
 <body>
@@ -14,10 +15,10 @@
     </header>
     <nav>
         <ul>
-            <li> <a href="">Strona główna</a></li>
-            <li> <a href=""> Drinki</a></li>
+            <li class="active"> <a href="../index.html">Strona główna</a></li>
+            <li> <a href="drinks.html"> Drinki</a></li>
             <li> <a href="">Skladniki</a></li>
-            <li> <a href="">Proporcje</a></li>
+            <li> <a href="proportion.html">Proporcje</a></li>
         </ul>
     </nav>
     <main>
@@ -40,12 +41,12 @@
                 <input type="text" name="Serve" value="---" id="Serve" disabled />
             </div>
             <p>
-                <a href="drink_form.html">Edytuj</a>
+                <a class="edit" href="drink_form.html">Edytuj</a>
             </p>
 
         </form>
         <h2>Szczegoly proporcji</h2>
-        <table>
+        <table class="table-list">
             <thead>
                 <tr>
                     <th>Skladnik</th>
@@ -67,7 +68,7 @@
             </tbody>
         </table>
 
-        <a href="index.html">Powrot</a>
+        <a class="details" href="index.html">Powrot</a>
     </main>
     <footer>
         <p>Stefan Branicki s18625</p>
