@@ -13,6 +13,7 @@ html {
     max-width: 1200px;
     margin: auto;
     background-image: url(../images/drinki.jpg);
+    /* background-repeat: repeat-x; */
     background-size: cover;
     background-position-x: 800px;
     /* background-position-x: left; */
@@ -147,6 +148,7 @@ nav ul li:hover a {
 }
 
 main {
+    position: relative;
     font-size: 2rem;
     padding: 1.5rem;
     background-color: rgba(38, 41, 42, .7);
@@ -158,13 +160,56 @@ label span {
     color: red;
 }
 
+main i.fab {
+    position: absolute;
+    right: 2rem;
+    color: royalblue;
+    bottom: 2rem;
+    font-size: 5rem;
+    animation: fbMove 2s both infinite;
+}
+
+@keyframes fbMove {
+    0% {
+        right: 2rem;
+    }
+
+    39% {
+        right: 2rem;
+    }
+
+    40% {
+        right: 1.5rem;
+    }
+
+    42% {
+        right: 2.5rem;
+    }
+
+    46% {
+        right: 1.5rem;
+    }
+
+    48% {
+        right: 2.5rem;
+    }
+
+    49% {
+        right: 2rem;
+    }
+
+    100% {
+        right: 2rem;
+    }
+}
+
 footer {
     text-align: center;
-    position: fixed;
+    /* position: fixed;
     left: 0;
     right: 0;
     bottom: 0;
-    margin: 0;
+    margin: 0; */
     font-size: 1.3rem;
 }
 
@@ -306,6 +351,15 @@ textarea {
     width: 100%;
 }
 
+.form textarea {
+    border: 1px solid #7f8c8d;
+    color: rgb(14, 14, 14);
+    border-radius: 5px;
+    padding: 0.5rem;
+    width: 200%;
+    height: 150px;
+}
+
 .form label {
     display: block;
     margin-bottom: 0.5em;
@@ -361,4 +415,64 @@ abbr[title='required'] {
 
 .form-button-submit {
     margin-bottom: 0.5rem;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.gallery div {
+    text-align: center;
+    flex-basis: 48%;
+    height: 25vh;
+    margin-top: 20px;
+    /* background-color: red; */
+    background-image: url(../images/drinki.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    /* background-position: -20% 0; */
+    /* background-position-x: ; */
+    transition: .7s;
+}
+
+.gallery div:nth-child(2) {
+    background-image: url(../images/drink2.jpg);
+
+}
+
+.gallery div:nth-child(3) {
+    background-image: url(../images/drink3.jpg);
+    background-position-y: 40%;
+    background-size: 100%;
+}
+
+.gallery div:nth-child(4) {
+    background-image: url(https://cdn.pixabay.com/photo/2016/11/23/14/49/alcohol-1853327_1280.jpg);
+    background-position-y: 40%;
+    background-size: 100%;
+}
+
+.gallery div:nth-child(3) p {
+    color: #2c3e50;
+}
+
+.gallery p {
+    line-height: 25vh;
+    opacity: 0;
+    transition: .4s;
+}
+
+.gallery div:hover {
+    background-size: 117%;
+    opacity: .9;
+}
+
+.gallery div:hover p {
+    opacity: 1;
+    font-size: 3rem;
+
+
 }
