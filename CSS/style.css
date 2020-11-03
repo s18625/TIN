@@ -101,6 +101,7 @@ nav ul li a {
     /* background-color: #ddd; */
     transition: .5s;
     display: block;
+    text-transform: uppercase;
 
 }
 
@@ -333,6 +334,7 @@ textarea {
 
 textarea {
     overflow: auto;
+    resize: none;
 }
 
 .form {
@@ -466,6 +468,7 @@ abbr[title='required'] {
     line-height: 25vh;
     opacity: 0;
     transition: .4s;
+    text-shadow: 0 -2px #2c3e50;
 }
 
 .gallery div:hover {
