@@ -15,10 +15,13 @@
     </header>
     <nav>
         <ul>
-            <li class="active"> <a href="../index.html">Strona główna</a></li>
+            <li> <a href="../index.html">Strona główna</a></li>
             <li> <a href="drinks.html"> Drinki</a></li>
-            <li> <a href="">Skladniki</a></li>
-            <li> <a href="proportion.html">Proporcje</a></li>
+            <li> <a href="ingreadient.html">Skladniki</a></li>
+            <li class="active"> <a href="proportion.html">Proporcje</a></li>
+            <li>
+                <a href="galery.html">Galeria</a>
+            </li>
         </ul>
     </nav>
     <main>
@@ -26,19 +29,19 @@
         <form class="form" action="">
             <div class="form-group">
                 <label for="Name">Nazwa:<span>* </span></label>
-                <input type="text" name="Name" id="Name">
+                <input type="text" name="Name" id="Name" placeholder="--wybierz nazwe--">
             </div>
             <div class="form-group">
                 <label for="Cost">Skladnik:<span>* </span></label>
-                <input type="number" name="Cost" id="Cost">
+                <input type="text" name="Cost" id="Cost" placeholder="--wybierz skladnik--">
             </div>
             <div class="form-group">
                 <label for="Description">Gramatura:<span>* </span></label>
-                <input type="text" name="Description" id="Description">
+                <input type="number" name="Description" id="Description">
             </div>
             <div class="form-group">
                 <label for="Podanie">Cena gramatury:</label>
-                <input type="text" name="Podanie" id="Podanie">
+                <input type="number" name="Podanie" id="Podanie">
             </div>
             <div class="form-buttons">
                 <input class="form-button-submit" type="submit" value="Dodaj proporcję" />

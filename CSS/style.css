@@ -156,6 +156,8 @@ main {
     flex-grow: 1;
 }
 
+
+
 label span {
     color: red;
 }
@@ -436,6 +438,7 @@ abbr[title='required'] {
     /* background-position: -20% 0; */
     /* background-position-x: ; */
     transition: .7s;
+    opacity: .6;
 }
 
 .gallery div:nth-child(2) {
@@ -446,17 +449,17 @@ abbr[title='required'] {
 .gallery div:nth-child(3) {
     background-image: url(../images/drink3.jpg);
     background-position-y: 40%;
-    background-size: 100%;
+    /* background-size: 100%; */
 }
 
 .gallery div:nth-child(4) {
     background-image: url(https://cdn.pixabay.com/photo/2016/11/23/14/49/alcohol-1853327_1280.jpg);
     background-position-y: 40%;
-    background-size: 100%;
+    /* background-size: 100%; */
 }
 
-.gallery div:nth-child(3) p {
-    color: #2c3e50;
+.gallery div.light p {
+    color: #555;
 }
 
 .gallery p {
@@ -472,7 +475,9 @@ abbr[title='required'] {
 
 .gallery div:hover p {
     opacity: 1;
-    font-size: 3rem;
+    font-size: 4rem;
+}
 
-
+.galMain {
+    background-color: rgba(38, 41, 42);
 }
