@@ -460,15 +460,13 @@ abbr[title='required'] {
     /* background-size: 100%; */
 }
 
-.gallery div.light p {
-    color: #555;
-}
+
 
 .gallery p {
     line-height: 25vh;
     opacity: 0;
     transition: .4s;
-    text-shadow: 0 -2px #2c3e50;
+    text-shadow: 0 -1px #2c3e50, 0 1px #2c3e50, -1px 0 #2c3e50, 1px 0 #2c3e50;
 }
 
 .gallery div:hover {
