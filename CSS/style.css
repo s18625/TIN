@@ -15,13 +15,15 @@ html {
     background-image: url(../images/drinki.jpg);
     /* background-repeat: repeat-x; */
     background-size: cover;
+    background-repeat: repeat-x;
     background-position-x: 800px;
     /* background-position-x: left; */
     /* background-attachment: fixed; */
 }
 
 body {
-    min-width: 600px;
+    /* min-width: 600px; */
+    min-width: 360px;
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -80,6 +82,7 @@ nav ul {
     overflow: hidden;
     list-style-type: none;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
 }
 
@@ -338,8 +341,11 @@ textarea {
 }
 
 .form {
+    display: grid;
+    grid-template-columns: 150px 300px;
+    row-gap: 1rem;
     margin-left: 2rem;
-    width: 300px;
+
 }
 
 
@@ -360,7 +366,7 @@ textarea {
     color: rgb(14, 14, 14);
     border-radius: 5px;
     padding: 0.5rem;
-    width: 200%;
+    /* width: 200%; */
     height: 150px;
 }
 
@@ -378,6 +384,8 @@ abbr[title='required'] {
 }
 
 .form-buttons {
+    grid-column-start: 1;
+    grid-column-end: -1;
     margin-top: 2rem;
 }
 
@@ -421,6 +429,11 @@ abbr[title='required'] {
     margin-bottom: 0.5rem;
 }
 
+
+/* /////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////GALERIA//////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////////////////////// */
+
 .gallery {
     display: flex;
     flex-wrap: wrap;
@@ -428,9 +441,9 @@ abbr[title='required'] {
     justify-content: space-around;
 }
 
-.gallery div {
+.gallery .zdj {
     text-align: center;
-    flex-basis: 48%;
+    flex-basis: 47%;
     height: 25vh;
     margin-top: 20px;
     /* background-color: red; */
@@ -439,16 +452,26 @@ abbr[title='required'] {
     background-repeat: no-repeat;
     /* background-position: -20% 0; */
     /* background-position-x: ; */
+
     transition: .7s;
-    opacity: .6;
+    opacity: .5;
+    position: relative;
 }
 
-.gallery div:nth-child(2) {
+.gallery .zdj:hover {
+    background-size: 117%;
+    opacity: .9;
+    z-index: 100;
+
+}
+
+
+.gallery .zdj:nth-child(2) {
     background-image: url(../images/drink2.jpg);
 
 }
 
-.gallery div:nth-child(3) {
+.gallery .zdj:nth-child(3) {
     background-image: url(../images/drink3.jpg);
     background-position-y: 40%;
     /* background-size: 100%; */
@@ -469,16 +492,132 @@ abbr[title='required'] {
     text-shadow: 0 -1px #2c3e50, 0 1px #2c3e50, -1px 0 #2c3e50, 1px 0 #2c3e50;
 }
 
-.gallery div:hover {
-    background-size: 117%;
-    opacity: .9;
-}
 
-.gallery div:hover p {
+.gallery .zdj:hover p {
     opacity: 1;
     font-size: 4rem;
 }
 
 .galMain {
     background-color: rgba(38, 41, 42);
+}
+
+/* ////////////////banery//////////////////////////// */
+.gallery .zdj div {
+    /* background-color: rgba(255, 0, 0, 1); */
+    position: absolute;
+    /* top: 0; */
+    right: 10%;
+    width: 30%;
+    height: 10%;
+    opacity: 0;
+    color: white;
+}
+
+/* ///////////////////ZDJECIA PO LEWEJ */
+.gallery .zdj:nth-child(odd) .baner1 {
+    background-color: brown;
+    position: absolute;
+    top: 0;
+    transition: .3s;
+}
+
+.gallery .zdj:nth-child(odd) .baner2 {
+    background-color: blue;
+    position: absolute;
+    top: 10%;
+    transition: .3s .2s;
+}
+
+.gallery .zdj:nth-child(odd):hover .baner1,
+.gallery .zdj:nth-child(odd):hover .baner2 {
+    right: -5%;
+    opacity: 1;
+}
+
+/* //////////////ZDJECIA PO PRAWEJ */
+
+.gallery .zdj:nth-child(even) .baner1 {
+    background-color: brown;
+    position: absolute;
+    top: 0;
+    right: 60%;
+    transition: .3s;
+}
+
+.gallery .zdj:nth-child(even) .baner2 {
+    background-color: blue;
+    position: absolute;
+    top: 10%;
+    right: 70%;
+    transition: .3s .2s;
+}
+
+.gallery .zdj:nth-child(even):hover .baner1,
+.gallery .zdj:nth-child(even):hover .baner2 {
+    right: 75%;
+    opacity: 1;
+}
+
+/* /////////////////////////////////////////////////////////////////////////////// */
+/* //////////////////////////////Glass in index/////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////////////////// */
+.glass {
+    position: absolute;
+    left: 50%;
+    bottom: 15%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 200px;
+    border: 10px solid #ccc;
+    border-top: transparent;
+    border-radius: 10px;
+    line-height: 200px;
+    text-align: center;
+    color: #ddd;
+    font-size: 25px;
+    font-weight: 600;
+    text-transform: uppercase;
+    overflow: hidden;
+}
+
+.glass::after {
+    content: "";
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: #ffcc00;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 40%;
+    animation: fillGlass 9s ease-in-out infinite both;
+    z-index: -1;
+}
+
+.holder {
+    position: absolute;
+    width: 50px;
+    height: 100px;
+    left: calc(50% + 200px/2 - 10px);
+    border-radius: 0 10px 10px 0;
+    bottom: calc(15% + 50px);
+    border: 10px solid #ccc;
+
+}
+
+@keyframes fillGlass {
+    0% {
+        top: 100%;
+        transform: translateX(-50%) rotate(0deg);
+    }
+
+    50% {
+        top: 10%;
+        transform: translateX(-50%) rotate(360deg);
+    }
+
+    100% {
+        top: 100%;
+        transform: translateX(-50%) rotate(0deg);
+    }
 }
