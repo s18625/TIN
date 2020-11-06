@@ -15,15 +15,14 @@ html {
     background-image: url(../images/drinki.jpg);
     /* background-repeat: repeat-x; */
     background-size: cover;
-    background-repeat: repeat-x;
+    /* background-repeat: repeat-x; */
     background-position-x: 800px;
     /* background-position-x: left; */
     /* background-attachment: fixed; */
 }
 
 body {
-    /* min-width: 600px; */
-    min-width: 360px;
+    min-width: 300px;
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -592,6 +591,7 @@ abbr[title='required'] {
     border-radius: 40%;
     animation: fillGlass 9s ease-in-out infinite both;
     z-index: -1;
+    border: solid wheat 10px;
 }
 
 .holder {
@@ -620,4 +620,110 @@ abbr[title='required'] {
         top: 100%;
         transform: translateX(-50%) rotate(0deg);
     }
+}
+
+@media all and (max-width: 720px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li:first-child {
+        flex-basis: 100%;
+    }
+
+    nav ul li {
+        flex-basis: 50%;
+        border: 1px solid cadetblue;
+    }
+
+    .glass,
+    .holder {
+        display: none;
+    }
+
+    .form {
+        grid-template-columns: 1fr;
+        row-gap: unset;
+        margin-left: unset;
+    }
+
+    .form input[type="text"],
+    .form input[type="number"],
+    .form input[type="date"],
+    .form select {
+        margin-bottom: 1rem;
+    }
+
+    .gallery .zdj {
+
+        flex-basis: 80%;
+        opacity: 1;
+    }
+
+    .gallery .zdj:hover {
+        background-size: 117%;
+        z-index: 100;
+
+    }
+
+    .gallery p {
+        opacity: 1;
+        transition: .4s;
+        text-shadow: 0 -1px #2c3e50, 0 1px #2c3e50, -1px 0 #2c3e50, 1px 0 #2c3e50;
+        font-size: 2rem;
+    }
+
+    .gallery .zdj:hover p {
+        font-size: 2rem;
+    }
+
+    /* ////////////////banery//////////////////////////// */
+    .gallery .zdj div {
+        /* background-color: rgba(255, 0, 0, 1); */
+        display: none;
+    }
+
+    /* ///////////////////ZDJECIA PO LEWEJ */
+
+    /* //////////////ZDJECIA PO PRAWEJ */
+
+
+
+
+
+}
+
+@media (max-width: 400px) {
+    header h1 {
+        font-size: 3rem;
+    }
+
+    nav ul li {
+        flex-basis: 100%;
+    }
+
+    nav ul li a {
+        font-size: 2rem;
+    }
+
+    main {
+        font-size: 1.5rem;
+    }
+
+    main h2 {
+        font-size: 2rem;
+    }
+
+    main i.fab {
+        position: fixed;
+        bottom: 10%;
+        left: 0;
+        width: 60px;
+        /* opacity: .9; */
+        padding: 5px;
+        border: solid 2px #467ee6;
+        border-left: none;
+    }
+
 }
