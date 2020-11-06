@@ -642,6 +642,17 @@ abbr[title='required'] {
         display: none;
     }
 
+    main i.fab {
+        position: fixed;
+        bottom: 10%;
+        left: 0;
+        width: 60px;
+        /* opacity: .9; */
+        padding: 5px;
+        border: solid 2px #467ee6;
+        border-left: none;
+    }
+
     .form {
         grid-template-columns: 1fr;
         row-gap: unset;
@@ -715,15 +726,6 @@ abbr[title='required'] {
         font-size: 2rem;
     }
 
-    main i.fab {
-        position: fixed;
-        bottom: 10%;
-        left: 0;
-        width: 60px;
-        /* opacity: .9; */
-        padding: 5px;
-        border: solid 2px #467ee6;
-        border-left: none;
-    }
+
 
 }
