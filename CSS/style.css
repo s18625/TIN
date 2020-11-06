@@ -282,6 +282,27 @@ main h2 {
     /* font-size: 0.8rem; */
 }
 
+.fa-info-circle,
+.fa-edit,
+.fa-trash {
+    display: none;
+    font-size: 0;
+
+}
+
+.fa-info-circle {
+    color: yellow;
+}
+
+.fa-edit {
+    color: greenyellow;
+}
+
+.fa-trash {
+    color: brown;
+}
+
+
 .details {
     background-color: yellow;
 
@@ -700,6 +721,20 @@ abbr[title='required'] {
     /* //////////////ZDJECIA PO PRAWEJ */
 
 
+    .fa-info-circle,
+    .fa-edit,
+    .fa-trash {
+        display: block;
+        font-size: 16px;
+        /* text-decoration: none; */
+
+    }
+
+    .details,
+    .edit,
+    .delete {
+        display: none;
+    }
 
 
 
