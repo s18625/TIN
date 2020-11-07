@@ -26,7 +26,7 @@ body {
     display: flex;
     flex-direction: column;
     height: 100vh;
-
+    /* cursor: url("../images/paczek.png"), auto; */
 }
 
 header,
@@ -151,6 +151,7 @@ nav ul li:hover a {
 }
 
 main {
+
     position: relative;
     font-size: 2rem;
     padding: 1.5rem;
@@ -592,20 +593,14 @@ abbr[title='required'] {
     border: 10px solid #ccc;
     border-top: transparent;
     border-radius: 10px;
-    line-height: 200px;
-    text-align: center;
-    color: #ddd;
-    font-size: 25px;
-    font-weight: 600;
-    text-transform: uppercase;
     overflow: hidden;
 }
 
 .glass::after {
     content: "";
     position: absolute;
-    width: 400px;
-    height: 400px;
+    width: 200%;
+    height: 200%;
     background: #ffcc00;
     left: 50%;
     transform: translateX(-50%);
@@ -658,9 +653,25 @@ abbr[title='required'] {
         border: 1px solid cadetblue;
     }
 
-    .glass,
+    main p {
+        margin-bottom: 50%;
+    }
+
+    .glass {
+        height: 100px;
+        width: 100px;
+        bottom: 5%;
+        border-width: 7px;
+        border-radius: 5px 5px 10px 10px;
+    }
+
     .holder {
-        display: none;
+        /* display: none; */
+        width: 25px;
+        height: 50px;
+        border-width: 7px;
+        left: calc(50% + 100px/2 - 7px);
+        bottom: calc(5% + 25px);
     }
 
     main i.fab {
