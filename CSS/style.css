@@ -722,10 +722,7 @@ abbr[title='required'] {
     }
 
     /* ////////////////banery//////////////////////////// */
-    .gallery .zdj div {
-        /* background-color: rgba(255, 0, 0, 1); */
-        display: none;
-    }
+
 
     /* ///////////////////ZDJECIA PO LEWEJ */
 
@@ -745,6 +742,15 @@ abbr[title='required'] {
     .edit,
     .delete {
         display: none;
+    }
+
+    .gallery .zdj div {
+        font-size: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* background-color: rgba(255, 0, 0, 1); */
+        /* display: none; */
     }
 
 
@@ -771,6 +777,8 @@ abbr[title='required'] {
     main h2 {
         font-size: 2rem;
     }
+
+
 
 
 
