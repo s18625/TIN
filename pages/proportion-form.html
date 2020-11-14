@@ -28,28 +28,30 @@
         <h2>Formularz proporcji</h2>
         <form class="form" action="">
 
-            <label for="Name">Nazwa:<span>* </span></label>
+            <label for="Name">Drink:<span>* </span></label>
             <select name="cars" id="cars">
-                <option value="Jagerbomb">Jagerbomb</option>
-                <option value="Mojito">Mojito</option>
-                <option value="SOTB">Sex on tge beach</option>
-                <option value="Cosmopolitan">Cosmopolitan</option>
+                <option value="" disabled selected hidden>--wybierz drinka--</option>
+                <option value="">Jagerbomb</option>
+                <option value="">Mojito</option>
+                <option value="">Sex on tge beach</option>
+                <option value="">Cosmopolitan</option>
             </select>
             <!-- <input type="text" name="Name" id="Name" placeholder="--wybierz nazwe--"> -->
 
             <label for="Cost">Skladnik:<span>* </span></label>
             <select name="cars" id="cars">
-                <option value="RedBull">Red bull</option>
-                <option value="Jagermeister">Jagermeister</option>
-                <option value="wodka">wodka</option>
-                <option value="SokPomaranczowy">Sok pomaranczowy</option>
+                <option value="" disabled selected hidden>--wybierz skladnik--</option>
+                <option value="">Red bull</option>
+                <option value="">Jagermeister</option>
+                <option value="">wodka</option>
+                <option value="">Sok pomaranczowy</option>
             </select>
 
             <label for="Description">Gramatura:<span>* </span></label>
             <input type="number" name="Description" id="Description">
 
-            <label for="Podanie">Cena gramatury:</label>
-            <input type="number" name="Podanie" id="Podanie">
+            <!-- <label for="Podanie">Cena gramatury:</label>
+            <input type="number" name="Podanie" id="Podanie"> -->
 
             <div class="form-buttons">
                 <input class="form-button-submit" type="submit" value="Dodaj proporcję" />
