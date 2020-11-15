@@ -656,6 +656,11 @@ abbr[title='required'] {
     color: brown;
 }
 
+/* 
+p.required {
+    color: red;
+} */
+
 
 @media all and (max-width: 720px) {
     header {

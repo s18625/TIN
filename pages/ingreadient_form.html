@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../CSS/style.css">
+    <script type="application/javascript" src="../js/validationCommon.js"></script>
+    <script type="application/javascript" src="../js/validationIngreadientForm.js"></script>
 </head>
 
 <body>
@@ -26,18 +28,25 @@
     </nav>
     <main>
         <h2>Formularz drinkow</h2>
-        <form class="form" action="">
+        <form class="form" action="" novalidate onsubmit="return validateIngreadient();">
 
             <label for="Name">Nazwa:<span>* </span></label>
             <input type="text" name="Name" id="Name">
+            <span id="errorName" class="errors-text required "></span>
+
 
             <label for="Cost">Cena(pln/100g)<span>* </span></label>
             <input type="number" name="Cost" id="Cost">
+            <span id="errorCost" class="errors-text required "></span>
 
-            <label for="Podanie">Opis skladnika:</label>
-            <textarea name="" id="" cols="30" rows="10"></textarea>
+
+            <label for="Description">Opis skladnika:</label>
+            <textarea name="" id="Description" cols="30" rows="10"></textarea>
+            <span id="errorDescription" class="errors-text required "></span>
+
 
             <div class="form-buttons">
+                <p id="errorsSummary" class="errors-text required "></p>
                 <input class="form-button-submit" type="submit" value="Dodaj skladnik" />
                 <a class="form-button-cancel" href="../index.html">Anuluj</a>
             </div>

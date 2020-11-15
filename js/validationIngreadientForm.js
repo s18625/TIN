@@ -1,4 +1,4 @@
-function validateDrink() {
+function validateIngreadient() {
     let errorResponse = '';
     const nameInput = document.getElementById('Name');
     const costInput = document.getElementById('Cost');
@@ -40,17 +40,17 @@ function validateDrink() {
 
 
     //////////DESCRIPTION/////////////////////////////////
-    if (!checkRequired(descriptionInput.value)) {
-        valid = false;
-        errorResponse += "<br>" + `-pole "Opis" nie jest wypelnione`;
-        descriptionInput.classList.add("error-input");
-        errorDescription.innerText = "Pole jest wymagane";
-    } else if (!checkTextLengthRange(nameInput.value, 2, 60)) {
-        valid = false;
-        errorResponse += "<br>" + `-pole "Nazwa" posida nieprawidlowa ilosc znakow`;
-        descriptionInput.classList.add("error-input");
-        errorDescription.innerText = "Pole powinno zawierać od 2 do 60 znaków";
-    }
+    // if (!checkRequired(descriptionInput.value)) {
+    //     valid = false;
+    //     errorResponse += "<br>" + `-pole "Opis" nie jest wypelnione`;
+    //     descriptionInput.classList.add("error-input");
+    //     errorDescription.innerText = "Pole jest wymagane";
+    // } else if (!checkTextLengthRange(nameInput.value, 2, 60)) {
+    //     valid = false;
+    //     errorResponse += "<br>" + `-pole "Nazwa" posida nieprawidlowa ilosc znakow`;
+    //     descriptionInput.classList.add("error-input");
+    //     errorDescription.innerText = "Pole powinno zawierać od 2 do 60 znaków";
+    // }
 
 
     if (!valid) {

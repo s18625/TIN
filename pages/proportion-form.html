@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>New Proportion</title>
     <link rel="stylesheet" href="../CSS/style.css">
-</head>
+    <script type="application/javascript" src="../js/validationCommon.js"></script>
+    <script type="application/javascript" src="../js/validationProportionForm.js"></script>
 
 <body>
     <header>
@@ -26,34 +27,38 @@
     </nav>
     <main>
         <h2>Formularz proporcji</h2>
-        <form class="form" action="">
+        <form class="form" action="" novalidate onsubmit="return validateProportion();">
 
             <label for="Name">Drink:<span>* </span></label>
-            <select name="cars" id="cars">
+            <select name="drinks" id="drink">
                 <option value="" disabled selected hidden>--wybierz drinka--</option>
                 <option value="">Jagerbomb</option>
                 <option value="">Mojito</option>
-                <option value="">Sex on tge beach</option>
+                <option value="">Sex on the beach</option>
                 <option value="">Cosmopolitan</option>
             </select>
-            <!-- <input type="text" name="Name" id="Name" placeholder="--wybierz nazwe--"> -->
+            <span id="errorDrink" class="errors-text required "></span>
+
 
             <label for="Cost">Skladnik:<span>* </span></label>
-            <select name="cars" id="cars">
+            <select name="cars" id="ingreadient">
                 <option value="" disabled selected hidden>--wybierz skladnik--</option>
                 <option value="">Red bull</option>
                 <option value="">Jagermeister</option>
                 <option value="">wodka</option>
                 <option value="">Sok pomaranczowy</option>
             </select>
+            <span id="errorIngreadient" class="errors-text required "></span>
+
 
             <label for="Description">Gramatura:<span>* </span></label>
-            <input type="number" name="Description" id="Description">
+            <input type="number" name="Description" id="gram">
+            <span id="errorGram" class="errors-text required "></span>
 
-            <!-- <label for="Podanie">Cena gramatury:</label>
-            <input type="number" name="Podanie" id="Podanie"> -->
+
 
             <div class="form-buttons">
+                <p id="errorsSummary" class="errors-text required "></p>
                 <input class="form-button-submit" type="submit" value="Dodaj proporcję" />
                 <a class="form-button-cancel" href="../index.html">Anuluj</a>
             </div>
