@@ -45,7 +45,8 @@ function validateDrink() {
         errorResponse += "<br>" + `-pole "Opis" nie jest wypelnione`;
         descriptionInput.classList.add("error-input");
         errorDescription.innerText = "Pole jest wymagane";
-    } else if (!checkTextLengthRange(nameInput.value, 2, 60)) {
+    } else if (!checkTextLengthRange(descriptionInput.value, 2, 60)) {
+        alert('jestem');
         valid = false;
         errorResponse += "<br>" + `-pole "Nazwa" posida nieprawidlowa ilosc znakow`;
         descriptionInput.classList.add("error-input");
