@@ -46,6 +46,8 @@ function validateProportion() {
 
     if (!valid) {
         errorsSummary.innerHTML = `Formularz zawiera błędy:` + errorResponse;
+    } else {
+        alert('Proporcja dodana do bazy danych');
     }
 
     return valid;

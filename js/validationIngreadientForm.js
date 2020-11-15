@@ -55,6 +55,8 @@ function validateIngreadient() {
 
     if (!valid) {
         errorsSummary.innerHTML = `Formularz zawiera błędy:` + errorResponse;
+    } else {
+        alert('Skladnik dodany do bazy danych');
     }
 
     return valid;

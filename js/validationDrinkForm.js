@@ -56,6 +56,8 @@ function validateDrink() {
 
     if (!valid) {
         errorsSummary.innerHTML = `Formularz zawiera błędy:` + errorResponse;
+    } else {
+        alert('drink dodany do bazy danych');
     }
 
     return valid;
