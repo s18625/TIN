@@ -33,6 +33,7 @@ function validateDrink() {
         costInput.classList.add("error-input");
         errorCost.innerText = "Pole jest wymagane";
     } else if (!checkNumberRange(costInput.value, 1, 1000)) {
+        valid = false;
         errorResponse += "<br>" + `-pole "Cena" zawiera nieprawidlowa wartosc`;
         costInput.classList.add("error-input");
         errorCost.innerText = "Wartosc pola musi byc z zakresu od 1 do 1000";
@@ -46,7 +47,6 @@ function validateDrink() {
         descriptionInput.classList.add("error-input");
         errorDescription.innerText = "Pole jest wymagane";
     } else if (!checkTextLengthRange(descriptionInput.value, 2, 60)) {
-        alert('jestem');
         valid = false;
         errorResponse += "<br>" + `-pole "Nazwa" posida nieprawidlowa ilosc znakow`;
         descriptionInput.classList.add("error-input");
