@@ -652,16 +652,29 @@ abbr[title='required'] {
     border: 3px solid #e74c3c
 }
 
-.required {
+
+span.required {
+    display: flex;
+    align-items: center;
     color: brown;
 }
 
-/* 
+
 p.required {
+    color: #FF4500;
+}
+
+#errorsSummary span {
+    color: whitesmoke;
+}
+
+#errorsSummary span span {
     color: red;
-} */
+}
 
-
+/* //=================================================================================== */
+/* //===========================MEDIA QUERIES================================================= */
+/* //=================================================================================== */
 @media all and (max-width: 720px) {
     header {
         flex-direction: column;
