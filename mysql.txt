@@ -1,0 +1,47 @@
+CREATE SCHEMA IF NOT EXISTS `tin-example`;
+
+CREATE TABLE IF NOT EXISTS `tin-example`.`Drink`
+    ( `_id` INT UNSIGNED NOT NULL AUTO_INCREMENT ,
+      `name` VARCHAR(50) NOT NULL ,
+      `prize` INT NOT NULL ,
+      `description` VARCHAR(50) ,
+      PRIMARY KEY (`_id`),
+      UNIQUE INDEX `drink_id_UNIQUE` (`_id` ASC)
+    ) ENGINE = InnoDB CHARSET=utf8 COLLATE utf8_general_ci;
+
+CREATE TABLE IF NOT EXISTS `tin-example`.`Ingreadient`
+    ( `_id` INT UNSIGNED NOT NULL AUTO_INCREMENT ,
+      `name` VARCHAR(50) NOT NULL ,
+      `prizeBy100g` DECIMAL(10,2) UNSIGNED NOT NULL ,
+      `description` VARCHAR(50) NOT NULL ,
+      PRIMARY KEY (`_id`),
+      UNIQUE INDEX `ingre_id_UNIQUE` (`_id` ASC)
+    ) ENGINE = InnoDB CHARSET=utf8 COLLATE utf8_general_ci;
+
+CREATE TABLE IF NOT EXISTS `tin-example`.`Proportion`
+    ( `_id` INT UNSIGNED NOT NULL AUTO_INCREMENT ,
+      `grammage` DECIMAL(10,2) UNSIGNED NOT NULL ,
+      `grammagePrize` DECIMAL(10,2) NOT NULL ,
+      `drink_id` INT UNSIGNED NOT NULL ,
+      `ingre_id` INT UNSIGNED NOT NULL ,
+      PRIMARY KEY (`_id`),
+      UNIQUE INDEX `proportion_id_UNIQUE` (`_id` ASC),
+      CONSTRAINT `drink_fk` FOREIGN KEY (`drink_id`) REFERENCES `tin-example`.`Drink` (`_id`),
+      CONSTRAINT `ingre_fk` FOREIGN KEY (`ingre_id`) REFERENCES `tin-example`.`Ingreadient` (`_id`)
+    ) ENGINE = InnoDB CHARSET=utf8 COLLATE utf8_general_ci;
+
+INSERT IGNORE INTO `tin-example`.`Employee` (`_id`, `name`, `prize`, `description) VALUES
+  (1, 'Jagerbomb', 15, ''),
+  (2, 'Mojito', 17, ''),
+  (3, 'SotB', '13, '')
+;
+
+INSERT IGNORE INTO `tin-example`.`Ingreadient` (`_id`, `name`, `prizeBy100g`,`description`) VALUES
+  (1, 'Jagermeister', 10,'Likier ziołowy'),
+  (2, 'RedBull', 5,'Napój energetyczny')
+;
+
+INSERT IGNORE INTO `tin-example`.`Proportion` (`_id`, `drink_id`, `ingre_id`, `grammage`, `grammagePrize`) VALUES
+  (1, 1, 1,100,10 ),
+  (2, 1, 2,200,10 )
+;

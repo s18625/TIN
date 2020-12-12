@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="614073b7-490e-4f96-8aa2-8a14466a5c98" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../CSS/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../images/drink2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../images/drink3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../images/drink4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../images/drinki.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../images/neon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../js/validationCommon.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../js/validationDrinkForm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../js/validationIngreadientForm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../js/validationProportionForm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pages/drink_details.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pages/drink_form.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pages/drinks.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pages/galery.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pages/ingreadient.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pages/ingreadient_details.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pages/ingreadient_form.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pages/proportion-form.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pages/proportion.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pages/proprtion-details.html" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="2" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="showPreview" value="true" />
+  </component>
+  <component name="ProjectId" id="1kdwN226SnTDBePUv0yTQ0DtWgM" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../GRK/cwiczenia/cw4-Przekształcenia_aficzne" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor.code.editing" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RunManager">
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.start" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="614073b7-490e-4f96-8aa2-8a14466a5c98" name="Default Changelist" comment="" />
+      <created>1606043732732</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1606043732732</updated>
+      <workItem from="1606043733783" duration="2137000" />
+      <workItem from="1606128892132" duration="239000" />
+      <workItem from="1606140204330" duration="163000" />
+      <workItem from="1606140387081" duration="4000" />
+      <workItem from="1606172688530" duration="12000" />
+      <workItem from="1607016903636" duration="8469000" />
+      <workItem from="1607206188195" duration="5000" />
+      <workItem from="1607506844797" duration="180000" />
+      <workItem from="1607514023475" duration="5000" />
+      <workItem from="1607515526421" duration="495000" />
+      <workItem from="1607594514281" duration="12000" />
+      <workItem from="1607605281493" duration="123000" />
+      <workItem from="1607606242987" duration="12000" />
+      <workItem from="1607607755748" duration="3976000" />
+      <workItem from="1607642881085" duration="36000" />
+      <workItem from="1607676299899" duration="676000" />
+      <workItem from="1607712711885" duration="9112000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1406" y="400" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1607724147012">
+      <screen x="0" y="0" width="2194" height="1204" />
+    </state>
+    <state x="1406" y="400" key="#com.intellij.fileTypes.FileTypeChooser/0.0.2194.1204@0.0.2194.1204" timestamp="1607724147012" />
+    <state x="1425" y="357" key="FileChooserDialogImpl" timestamp="1607594525076">
+      <screen x="0" y="0" width="2194" height="1204" />
+    </state>
+    <state x="1425" y="357" key="FileChooserDialogImpl/0.0.2194.1204@0.0.2194.1204" timestamp="1607594525076" />
+    <state width="1076" height="327" key="GridCell.Tab.0.bottom" timestamp="1607025201943">
+      <screen x="0" y="0" width="2194" height="1204" />
+    </state>
+    <state width="1076" height="327" key="GridCell.Tab.0.bottom/0.0.2194.1204@0.0.2194.1204" timestamp="1607025201943" />
+    <state width="1076" height="327" key="GridCell.Tab.0.center" timestamp="1607025201943">
+      <screen x="0" y="0" width="2194" height="1204" />
+    </state>
+    <state width="1076" height="327" key="GridCell.Tab.0.center/0.0.2194.1204@0.0.2194.1204" timestamp="1607025201943" />
+    <state width="1076" height="327" key="GridCell.Tab.0.left" timestamp="1607025201943">
+      <screen x="0" y="0" width="2194" height="1204" />
+    </state>
+    <state width="1076" height="327" key="GridCell.Tab.0.left/0.0.2194.1204@0.0.2194.1204" timestamp="1607025201943" />
+    <state width="1076" height="327" key="GridCell.Tab.0.right" timestamp="1607025201943">
+      <screen x="0" y="0" width="2194" height="1204" />
+    </state>
+    <state width="1076" height="327" key="GridCell.Tab.0.right/0.0.2194.1204@0.0.2194.1204" timestamp="1607025201943" />
+    <state x="1127" y="192" width="981" height="757" key="SettingsEditor" timestamp="1607515963787">
+      <screen x="0" y="0" width="2194" height="1204" />
+    </state>
+    <state x="1127" y="192" width="981" height="757" key="SettingsEditor/0.0.2194.1204@0.0.2194.1204" timestamp="1607515963787" />
+    <state x="1309" y="271" width="672" height="678" key="search.everywhere.popup" timestamp="1607713012435">
+      <screen x="0" y="0" width="2194" height="1204" />
+    </state>
+    <state x="1309" y="271" width="672" height="678" key="search.everywhere.popup/0.0.2194.1204@0.0.2194.1204" timestamp="1607713012435" />
+  </component>
+</project>

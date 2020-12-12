@@ -1,0 +1,61 @@
+<%- include('../fragments/header.ejs') %>
+<main>
+    <h2>Drinki</h2>
+
+    <table class="table-list">
+        <thead>
+            <tr>
+                <th>Nazwa</th>
+                <th>Cena</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Jagerbomb</td>
+                <td>15pln</td>
+                <td>
+                    <ul class="list-actions">
+                        <li>
+                            <a class="details" href="drinks/details">Szczegóły</a>
+                            <a class="infoIcon" href="drinks/details"><i class="fas fa-info-circle"></i></a>
+                        </li>
+                        <li>
+                            <a class="edit" href="">Edytuj</a>
+                            <a href=""><i class="fas fa-edit"></i></a>
+                        </li>
+                        <li>
+                            <a class="delete" href="">Usuń</a>
+                            <a href=""><i class="fas fa-trash"></i></a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>Mojito</td>
+                <td>22pln</td>
+                <td>
+                    <ul class="list-actions">
+                        <li>
+                            <a class="details" href="drinks/details">Szczegóły</a>
+                            <a href="drinks/details"><i class="fas fa-info-circle"></i></a>
+                        </li>
+                        <li>
+                            <a class="edit" href="">Edytuj</a>
+                            <a href=""><i class="fas fa-edit"></i></a>
+                        </li>
+                        <li>
+                            <a class="delete" href="">Usuń</a>
+                            <a href=""><i class="fas fa-trash"></i></a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <a class="button-add" href="drinks/add">Dodaj nowego drinka</a>
+
+
+</main>
+<%- include('../fragments/footer.ejs') %>

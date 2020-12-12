@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/CSS/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Baza drinków</h1>
+        <img src="/images/neon.png" alt="logo">
+    </header>
+    <nav>
+        <ul>
+
+            <li class="<%= navLocation == 'main' ? 'active' : ''%>"> <a href="/">Strona główna</a></li>
+            <li class="<%= navLocation == 'drinks' ? 'active' : ''%>">
+                <a href="/drinks"> Drinki</a>
+            </li>
+            <li class="<%= navLocation == 'ingreadient' ? 'active' : ''%>">
+                <a href="/ingreadient">Skladniki</a>
+            </li>
+            <li class="<%= navLocation == 'proportion' ? 'active' : ''%>">
+                <a href="/proportion">Proporcje</a>
+            </li>
+            <li class="<%= navLocation == 'gallery' ? 'active' : ''%>">
+                <a href="gallery">Galeria</a>
+            </li>
+        </ul>
+    </nav>

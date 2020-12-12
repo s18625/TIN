@@ -1,0 +1,34 @@
+<%- include('../fragments/header.ejs') %>
+<main>
+    <h2>Formularz Skladnika</h2>
+    <form class="form" action="" novalidate onsubmit="return validateIngreadient();">
+
+        <label for="Name">Nazwa:<span>* </span></label>
+        <input type="text" name="Name" id="Name">
+        <span id="errorName" class="errors-text required "></span>
+
+
+        <label for="Cost">Cena(pln/100g)<span>* </span></label>
+        <input type="number" name="Cost" id="Cost">
+        <span id="errorCost" class="errors-text required "></span>
+
+
+        <label for="Description">Opis skladnika:</label>
+        <textarea name="" id="Description" cols="30" rows="10"></textarea>
+        <span id="errorDescription" class="errors-text required "></span>
+
+
+        <div class="form-buttons">
+            <p id="errorsSummary" class="errors-text required ">
+                <span> Pola z "<span class="gwiazdka">*</span>" sa wymagane
+                </span>
+            </p>
+            <input class="form-button-submit" type="submit" value="Dodaj skladnik" />
+            <a class="form-button-cancel" href="../index.html">Anuluj</a>
+        </div>
+
+
+    </form>
+
+</main>
+<%- include('../fragments/footer.ejs') %>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="0a347fbf-fe31-4cc9-897f-8531bf8e9e0d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/CSS/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/drink2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/drink3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/drink4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/drinki.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/neon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/validationCommon.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/validationDrinkForm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/validationIngreadientForm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/validationProportionForm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/drink_details.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/drink_form.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/drinks.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/galery.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/ingreadient.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/ingreadient_details.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/ingreadient_form.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/proportion-form.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/proportion.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/proprtion-details.html" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1kyqo0EkjabhkOlqLP7be64IBXn" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0a347fbf-fe31-4cc9-897f-8531bf8e9e0d" name="Default Changelist" comment="" />
+      <created>1606683349497</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1606683349497</updated>
+      <workItem from="1606683350781" duration="1993000" />
+      <workItem from="1606689993320" duration="15000" />
+      <workItem from="1606690864521" duration="2237000" />
+      <workItem from="1606732427388" duration="600000" />
+      <workItem from="1606747423652" duration="2238000" />
+      <workItem from="1606991601466" duration="8000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1368" y="205" key="FileChooserDialogImpl" timestamp="1606690006739">
+      <screen x="0" y="0" width="2194" height="1204" />
+    </state>
+    <state x="1368" y="205" key="FileChooserDialogImpl/0.0.2194.1204@0.0.2194.1204" timestamp="1606690006739" />
+  </component>
+</project>

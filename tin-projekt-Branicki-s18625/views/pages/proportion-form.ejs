@@ -1,0 +1,47 @@
+<%- include('../fragments/header.ejs') %>
+<main>
+    <h2>Formularz proporcji</h2>
+    <form class="form" action="" novalidate onsubmit="return validateProportion();">
+
+        <label for="Name">Drink:<span>* </span></label>
+        <select name="drinks" id="drink">
+            <option value="" disabled selected hidden>--wybierz drinka--</option>
+            <option value="Jagerbomb">Jagerbomb</option>
+            <option value="Mojito">Mojito</option>
+            <option value="Sex on the beach">Sex on the beach</option>
+            <option value="Cosmopolitan">Cosmopolitan</option>
+        </select>
+        <span id="errorDrink" class="errors-text required "></span>
+
+
+        <label for="Cost">Skladnik:<span>* </span></label>
+        <select name="cars" id="ingreadient">
+            <option value="" disabled selected hidden>--wybierz skladnik--</option>
+            <option value="Red bull">Red bull</option>
+            <option value="Jagermeister">Jagermeister</option>
+            <option value="wodka">wodka</option>
+            <option value="Sok pomaranczowy">Sok pomaranczowy</option>
+        </select>
+        <span id="errorIngreadient" class="errors-text required "></span>
+
+
+        <label for="Description">Gramatura:<span>* </span></label>
+        <input type="number" name="Description" id="gram">
+        <span id="errorGram" class="errors-text required "></span>
+
+
+
+        <div class="form-buttons">
+            <p id="errorsSummary" class="errors-text required ">
+                <span> Pola z "<span class="gwiazdka">*</span>" sa wymagane
+                </span>
+            </p>
+            <input class="form-button-submit" type="submit" value="Dodaj proporcję" />
+            <a class="form-button-cancel" href="../index.html">Anuluj</a>
+        </div>
+
+
+    </form>
+
+</main>
+<%- include('../fragments/footer.ejs') %>

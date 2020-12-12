@@ -1,0 +1,827 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Turret+Road&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: #666;
+    font-family: 'Roboto', sans-serif;
+    font-size: 10px;
+    max-width: 1200px;
+    margin: auto;
+    background-image: url(../images/drinki.jpg);
+    /* background-repeat: repeat-x; */
+    background-size: cover;
+    /* background-repeat: repeat-x; */
+    background-position-x: 800px;
+    /* background-position-x: left; */
+    /* background-attachment: fixed; */
+}
+
+body {
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    /* cursor: url("../images/paczek.png"), auto; */
+}
+
+header,
+main,
+footer {
+    background-color: whitesmoke;
+}
+
+header,
+main,
+footer,
+nav {
+    margin: 1rem;
+}
+
+header,
+footer {
+    background-color: rgb(45, 76, 170);
+    color: white;
+    padding: 1rem;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+header h1 {
+    display: flex;
+    flex-grow: 5;
+    text-align: center;
+    font-size: 3rem;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    font-family: 'Turret Road', cursive;
+
+}
+
+header img {
+    width: 100px;
+    height: auto;
+    flex-grow: 1;
+}
+
+nav {
+    background-color: #bdc3c7;
+}
+
+nav ul {
+    padding: 0;
+    overflow: hidden;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+nav ul li {
+    flex-grow: 1;
+    background-color: rgb(168, 235, 185);
+    text-align: center;
+    transition: .3s;
+    position: relative;
+    overflow: hidden;
+}
+
+nav ul li a {
+    /* display: inline-block; */
+    color: #2c3e50;
+    padding: 1rem 2rem;
+    font-size: 2.5rem;
+    text-decoration: none;
+    /* background-color: #ddd; */
+    transition: .5s;
+    display: block;
+    text-transform: uppercase;
+
+}
+
+nav ul li::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 10px;
+    background-color: darkslategrey;
+    transform: translateY(-50%);
+    top: 50%;
+    left: 100%;
+    transition: left 0.2s, height 0.2s 0.2s;
+    z-index: -1;
+}
+
+nav ul li:hover::after {
+    left: 0;
+    height: 102%;
+
+    /* background-color: royalblue;
+    color: whitesmoke; */
+}
+
+nav ul li:hover {
+    color: whitesmoke;
+    z-index: 2;
+}
+
+nav ul li:hover a {
+    color: whitesmoke;
+}
+
+/* nav ul li:hover {
+    background-color: royalblue;
+} */
+
+.active {
+    background-color: gray;
+    color: whitesmoke;
+}
+
+.active a {
+    color: whitesmoke;
+}
+
+main {
+
+    position: relative;
+    font-size: 2rem;
+    padding: 1.5rem;
+    background-color: rgba(38, 41, 42, .7);
+    color: whitesmoke;
+    flex-grow: 1;
+}
+
+
+
+label span {
+    color: red;
+}
+
+main i.fab {
+    position: absolute;
+    right: 2rem;
+    color: royalblue;
+    bottom: 2rem;
+    font-size: 5rem;
+    animation: fbMove 2s both infinite;
+}
+
+@keyframes fbMove {
+    0% {
+        right: 2rem;
+    }
+
+    39% {
+        right: 2rem;
+    }
+
+    40% {
+        right: 1.5rem;
+    }
+
+    42% {
+        right: 2.5rem;
+    }
+
+    46% {
+        right: 1.5rem;
+    }
+
+    48% {
+        right: 2.5rem;
+    }
+
+    49% {
+        right: 2rem;
+    }
+
+    100% {
+        right: 2rem;
+    }
+}
+
+footer {
+    text-align: center;
+    /* position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0; */
+    font-size: 1.3rem;
+}
+
+main h2 {
+    border-bottom: 2px solid rgb(168, 235, 185);
+    margin-bottom: 2rem;
+}
+
+/* ==================================================================== */
+/* ====================================================================== */
+/* dla tabelek */
+
+.table-list {
+    border-collapse: collapse;
+    color: #2c3e50;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.table-list,
+.table-list th,
+.table-list td {
+    border: 2px solid #ecf0f1;
+}
+
+.table-list th,
+.table-list td {
+    padding: 0.5rem;
+    color: whitesmoke;
+}
+
+.table-list th,
+.table-list tbody tr:nth-child(even) {
+    background-color: #467ee6;
+    color: white;
+}
+
+.list-actions {
+    margin: 0;
+    text-align: center;
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+}
+
+.list-actions li {
+    flex-grow: 1;
+    /* text-decoration:none ; */
+    /* display: inline-block; */
+}
+
+.details,
+.edit,
+.delete,
+.button-add,
+.form-button-submit,
+.form-button-cancel {
+    border: none;
+    border-radius: 5px;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    padding: 0 20px;
+    transition: .3s;
+    /* font-size: 0.8rem; */
+}
+
+.fa-info-circle,
+.fa-edit,
+.fa-trash {
+    display: none;
+    font-size: 0;
+
+}
+
+.fa-info-circle {
+    color: yellow;
+}
+
+.fa-edit {
+    color: greenyellow;
+}
+
+.fa-trash {
+    color: brown;
+}
+
+
+.details {
+    background-color: yellow;
+
+}
+
+.edit {
+    background-color: greenyellow;
+}
+
+.delete {
+    background-color: brown;
+}
+
+.details:hover {
+    background-color: rgb(155, 155, 9);
+}
+
+.edit:hover {
+    background-color: rgb(108, 160, 29);
+}
+
+.delete:hover {
+    background-color: rgb(83, 23, 23);
+}
+
+a .button-add {
+    margin-top: 50px;
+    ;
+    padding: 1.2rem 1rem;
+    background-color: #27ae60;
+}
+
+
+.button-add:hover {
+    background-color: #2ecc71;
+}
+
+/* 
+=============================================
+=============================================
+formularz nowego rekordu */
+button,
+input,
+select,
+textarea {
+    font-family: 'Roboto';
+    font-size: 100%;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+textarea {
+    overflow: auto;
+    resize: none;
+}
+
+.form {
+    display: grid;
+    grid-template-columns: 150px 300px 1fr;
+    row-gap: 1rem;
+    margin-left: 2rem;
+    column-gap: 1rem;
+}
+
+
+.form select,
+.form input[type="text"],
+.form input[type="number"],
+.form input[type="date"],
+.form input[type="email"] {
+    border: 1px solid #7f8c8d;
+    color: rgb(14, 14, 14);
+    border-radius: 5px;
+    padding: 0.5rem;
+    width: 100%;
+}
+
+.form textarea {
+    border: 1px solid #7f8c8d;
+    color: rgb(14, 14, 14);
+    border-radius: 5px;
+    padding: 0.5rem;
+    /* width: 200%; */
+    height: 150px;
+}
+
+.form label {
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+abbr[title='required'] {
+    color: #c0392b;
+}
+
+.form-buttons {
+    grid-column: 1 / span 2;
+    margin-top: 2rem;
+}
+
+.button-add,
+.form-button-submit,
+.form-button-cancel {
+    padding: 0.5rem 1rem;
+}
+
+.button-add,
+.form-button-submit {
+    margin-top: 10px;
+    background-color: #27ae60;
+}
+
+.button-add:hover,
+.form-button-submit:hover {
+    background-color: #2ecc71;
+}
+
+.form-button-cancel,
+.list-actions-button-delete {
+    background-color: #c0392b;
+}
+
+.form-button-cancel:hover,
+.list-actions-button-delete:hover {
+    background-color: #e74c3c;
+}
+
+.form-button-cancel {
+    box-sizing: border-box;
+    display: block;
+}
+
+.form-button-submit,
+.form-button-cancel {
+    width: 100%;
+}
+
+.form-button-submit {
+    margin-bottom: 0.5rem;
+}
+
+
+/* /////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////GALERIA//////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////////////////////// */
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.gallery .zdj {
+    text-align: center;
+    flex-basis: 47%;
+    height: 25vh;
+    margin-top: 20px;
+    /* background-color: red; */
+    background-image: url(../images/drinki.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    /* background-position: -20% 0; */
+    /* background-position-x: ; */
+
+    transition: .7s;
+    opacity: .5;
+    position: relative;
+}
+
+.gallery .zdj:hover {
+    background-size: 117%;
+    opacity: .9;
+    z-index: 100;
+
+}
+
+
+.gallery .zdj:nth-child(2) {
+    background-image: url(../images/drink2.jpg);
+
+}
+
+.gallery .zdj:nth-child(3) {
+    background-image: url(../images/drink3.jpg);
+    background-position-y: 40%;
+    /* background-size: 100%; */
+}
+
+.gallery div:nth-child(4) {
+    background-image: url(https://cdn.pixabay.com/photo/2016/11/23/14/49/alcohol-1853327_1280.jpg);
+    background-position-y: 40%;
+    /* background-size: 100%; */
+}
+
+
+
+.gallery p {
+    line-height: 25vh;
+    opacity: 0;
+    transition: .4s;
+    text-shadow: 0 -1px #2c3e50, 0 1px #2c3e50, -1px 0 #2c3e50, 1px 0 #2c3e50;
+}
+
+
+.gallery .zdj:hover p {
+    opacity: 1;
+    font-size: 4rem;
+}
+
+.galMain {
+    background-color: rgba(38, 41, 42);
+}
+
+/* ////////////////banery//////////////////////////// */
+.gallery .zdj div {
+    /* background-color: rgba(255, 0, 0, 1); */
+    position: absolute;
+    /* top: 0; */
+    right: 10%;
+    width: 30%;
+    height: 10%;
+    opacity: 0;
+    color: white;
+}
+
+/* ///////////////////ZDJECIA PO LEWEJ */
+.gallery .zdj:nth-child(odd) .baner1 {
+    background-color: brown;
+    position: absolute;
+    top: 0;
+    transition: .3s;
+}
+
+.gallery .zdj:nth-child(odd) .baner2 {
+    background-color: blue;
+    position: absolute;
+    top: 10%;
+    transition: .3s .2s;
+}
+
+.gallery .zdj:nth-child(odd):hover .baner1,
+.gallery .zdj:nth-child(odd):hover .baner2 {
+    right: -5%;
+    opacity: 1;
+}
+
+/* //////////////ZDJECIA PO PRAWEJ */
+
+.gallery .zdj:nth-child(even) .baner1 {
+    background-color: brown;
+    position: absolute;
+    top: 0;
+    right: 60%;
+    transition: .3s;
+}
+
+.gallery .zdj:nth-child(even) .baner2 {
+    background-color: blue;
+    position: absolute;
+    top: 10%;
+    right: 70%;
+    transition: .3s .2s;
+}
+
+.gallery .zdj:nth-child(even):hover .baner1,
+.gallery .zdj:nth-child(even):hover .baner2 {
+    right: 75%;
+    opacity: 1;
+}
+
+/* /////////////////////////////////////////////////////////////////////////////// */
+/* //////////////////////////////Glass in index/////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////////////////// */
+.glass {
+    position: absolute;
+    left: 50%;
+    bottom: 15%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 200px;
+    border: 10px solid #ccc;
+    border-top: transparent;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.glass::after {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: #ffcc00;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 40%;
+    animation: fillGlass 9s ease-in-out infinite both;
+    z-index: -1;
+    border: solid wheat 10px;
+}
+
+.holder {
+    position: absolute;
+    width: 50px;
+    height: 100px;
+    left: calc(50% + 200px/2 - 10px);
+    border-radius: 0 10px 10px 0;
+    bottom: calc(15% + 50px);
+    border: 10px solid #ccc;
+
+}
+
+@keyframes fillGlass {
+    0% {
+        top: 100%;
+        transform: translateX(-50%) rotate(0deg);
+    }
+
+    50% {
+        top: 10%;
+        transform: translateX(-50%) rotate(360deg);
+    }
+
+    100% {
+        top: 100%;
+        transform: translateX(-50%) rotate(0deg);
+    }
+}
+
+/* /////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////poczatek js///////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////////////////// */
+
+.errors-text {
+    font-size: 0.85em;
+    line-height: 2.25rem;
+}
+
+.form input.error-input,
+.form select.error-input {
+    border: 3px solid #e74c3c
+}
+
+
+span.required {
+    display: flex;
+    align-items: center;
+    color: brown;
+}
+
+
+p.required {
+    color: #FF4500;
+}
+
+#errorsSummary span {
+    color: whitesmoke;
+}
+
+#errorsSummary span span {
+    color: red;
+}
+
+/* //=================================================================================== */
+/* //===========================MEDIA QUERIES================================================= */
+/* //=================================================================================== */
+@media all and (max-width: 720px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li:first-child {
+        flex-basis: 100%;
+    }
+
+    nav ul li {
+        flex-basis: 50%;
+        border: 1px solid cadetblue;
+    }
+
+    main p {
+        margin-bottom: 50%;
+    }
+
+    .glass {
+        height: 100px;
+        width: 100px;
+        bottom: 5%;
+        border-width: 7px;
+        border-radius: 5px 5px 10px 10px;
+    }
+
+    .holder {
+        /* display: none; */
+        width: 25px;
+        height: 50px;
+        border-width: 7px;
+        left: calc(50% + 100px/2 - 7px);
+        bottom: calc(5% + 25px);
+    }
+
+    main i.fab {
+        position: fixed;
+        bottom: 10%;
+        left: 0;
+        width: 60px;
+        /* opacity: .9; */
+        padding: 5px;
+        border: solid 2px #467ee6;
+        border-left: none;
+    }
+
+    .form {
+        grid-template-columns: 1fr;
+        row-gap: unset;
+        margin-left: unset;
+    }
+
+    /* 
+    .form input[type="text"],
+    .form input[type="number"],
+    .form input[type="date"],
+    .form select {
+        margin-bottom: 1rem;
+    } */
+
+    .gallery .zdj {
+
+        flex-basis: 80%;
+        opacity: 1;
+    }
+
+    .gallery .zdj:hover {
+        background-size: 117%;
+        z-index: 100;
+
+    }
+
+    .gallery p {
+        opacity: 1;
+        transition: .4s;
+        text-shadow: 0 -1px #2c3e50, 0 1px #2c3e50, -1px 0 #2c3e50, 1px 0 #2c3e50;
+        font-size: 2rem;
+    }
+
+    .gallery .zdj:hover p {
+        font-size: 2rem;
+    }
+
+    .fa-info-circle,
+    .fa-edit,
+    .fa-trash {
+        display: block;
+        font-size: 16px;
+        /* text-decoration: none; */
+
+    }
+
+    .details,
+    .edit,
+    .delete {
+        display: none;
+    }
+
+    .gallery .zdj div {
+        font-size: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* background-color: rgba(255, 0, 0, 1); */
+        /* display: none; */
+    }
+
+    .form .errors-text {
+        margin-bottom: 1rem;
+    }
+
+    .form-buttons {
+        grid-column: 1 / span 1;
+    }
+
+
+}
+
+@media (max-width: 400px) {
+    header h1 {
+        font-size: 3rem;
+    }
+
+    nav ul li {
+        flex-basis: 100%;
+    }
+
+    nav ul li a {
+        font-size: 2rem;
+    }
+
+    main {
+        font-size: 1.5rem;
+    }
+
+    main h2 {
+        font-size: 2rem;
+    }
+
+}
+
+/*@media (max-height: 900px) {*/
+
+/*    .glass,*/
+/*    .holder {*/
+/*        display: none;*/
+/*    }*/
+
+/*}*/
