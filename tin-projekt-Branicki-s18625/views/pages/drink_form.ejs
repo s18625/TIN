@@ -1,36 +1,74 @@
 <%- include('../fragments/header.ejs') %>
 <main>
-    <h2>Formularz drinkow</h2>
-    <form class="form" action="" novalidate onsubmit="return validateDrink();">
+    <script type="application/javascript" src="/public/js/validationDrinkForm.js"></script>
+    <h2><%= pageTitle %></h2>
+    <form class="form" method="post" action="<%=formAction%>" novalidate onsubmit="return validateForm();">
+        <input type="hidden" name="_id" value="<%= drink._id %>">
 
         <label for="Name">Nazwa:<span>* </span></label>
-        <input type="text" name="Name" id="Name" placeholder="2-60 znaków">
+        <input type="text" name="Name" id="Name" placeholder="2-60 znaków" value="<%= drink.name %>"
+            <%= (formMode == 'showDetails') ? 'disabled' : '' %>>
         <span id="errorName" class="errors-text required "></span>
 
 
         <label for="Cost">Cena:<span>* </span></label>
-        <input type="number" name="Cost" id="Cost" placeholder="liczba dodatnia">
+        <input type="number" name="Cost" id="Cost" placeholder="liczba dodatnia" value="<%= drink.prize %>"
+            <%= (formMode == 'showDetails') ? 'disabled' : '' %>>
+
         <span id="errorCost" class="errors-text required "></span>
 
         <label for="Description">Opis:<span>* </span></label>
-        <input type="text" name="Description" id="Description" placeholder="2-60 znaków">
+        <input type="text" name="Description" id="Description" placeholder="2-60 znaków"
+            value="<%= drink.description %>" <%= (formMode == 'showDetails') ? 'disabled' : '' %>>
         <span id="errorDescription" class="errors-text required "></span>
 
 
         <label for="Podanie">Propozycja podania:</label>
-        <textarea name="" id="" cols="30" rows="10"></textarea>
+        <textarea name="" id="" cols="30" rows="10" value="<%= drink.serve %>"
+            <%= (formMode == 'showDetails') ? 'disabled' : '' %>></textarea>
 
         <div class="form-buttons">
             <p id="errorsSummary" class="errors-text required ">
                 <span> Pola z "<span class="gwiazdka">*</span>" sa wymagane
                 </span>
             </p>
-            <input class="form-button-submit" type="submit" value="Dodaj drink" />
+            <% if (formMode != 'showDetails') { %>
+            <input class="form-button-submit" type="submit" value="<%=btnLabel%>" />
             <a class="form-button-cancel" href="/drinks">Anuluj</a>
+            <% } else { %>
+            <a class="form-button-cancel" href="/drinks">Powrot</a>
+            <% } %>
         </div>
+
+
 
 
     </form>
 
+    <% if (formMode == 'showDetails' || formMode == 'edit') { %>
+    <h2>
+        Szczegóły drinka
+    </h2>
+    <table class="table-list">
+        <thead>
+            <tr>
+                <th>Skladnik</th>
+                <th>gramatura</th>
+                <th>Cena gramatury</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% for (let p of drink.proportions) { %>
+            <tr>
+                <td><a href="/ingreadients/details/<%= p.ingreadient._id %>"
+                        style="text-decoration: none; color: whitesmoke;"><%= p.ingreadient.name %></a></td>
+                <td><%= p.grammage %></td>
+                <td><%= p.costByGrammage %></td>
+            </tr>
+
+            <% } %>
+        </tbody>
+    </table>
+    <% } %>
 </main>
 <%- include('../fragments/footer.ejs') %>

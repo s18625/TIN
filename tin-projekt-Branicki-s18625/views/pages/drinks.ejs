@@ -6,51 +6,34 @@
         <thead>
             <tr>
                 <th>Nazwa</th>
-                <th>Cena</th>
+                <th>Cena(pln)</th>
                 <th></th>
             </tr>
         </thead>
         <tbody>
+            <% for (let drink of drinks) { %>
             <tr>
-                <td>Jagerbomb</td>
-                <td>15pln</td>
+                <td><%= drink.name %></td>
+                <td><%= drink.prize %></td>
                 <td>
                     <ul class="list-actions">
                         <li>
-                            <a class="details" href="drinks/details">Szczegóły</a>
+                            <a href="/drinks/details/<%=drink._id%>" class="details">Szczegóły</a>
                             <a class="infoIcon" href="drinks/details"><i class="fas fa-info-circle"></i></a>
                         </li>
                         <li>
-                            <a class="edit" href="">Edytuj</a>
-                            <a href=""><i class="fas fa-edit"></i></a>
+
+                            <a href="/drinks/edit/<%=drink._id%>" class="edit">Edytuj</a>
+                            <a href="/drinks/edit/<%=drink._id%>"><i class="fas fa-edit"></i></a>
                         </li>
                         <li>
-                            <a class="delete" href="">Usuń</a>
-                            <a href=""><i class="fas fa-trash"></i></a>
+                            <a href="/drinks/delete/<%=drink._id%>" class="delete">Usuń</a>
+                            <a href="/drinks/delete/<%=drink._id%>"><i class="fas fa-trash"></i></a>
                         </li>
                     </ul>
                 </td>
             </tr>
-            <tr>
-                <td>Mojito</td>
-                <td>22pln</td>
-                <td>
-                    <ul class="list-actions">
-                        <li>
-                            <a class="details" href="drinks/details">Szczegóły</a>
-                            <a href="drinks/details"><i class="fas fa-info-circle"></i></a>
-                        </li>
-                        <li>
-                            <a class="edit" href="">Edytuj</a>
-                            <a href=""><i class="fas fa-edit"></i></a>
-                        </li>
-                        <li>
-                            <a class="delete" href="">Usuń</a>
-                            <a href=""><i class="fas fa-trash"></i></a>
-                        </li>
-                    </ul>
-                </td>
-            </tr>
+            <% } %>
 
         </tbody>
     </table>
@@ -59,3 +42,46 @@
 
 </main>
 <%- include('../fragments/footer.ejs') %>
+
+
+
+<!-- <tr>
+    <td>Jagerbomb</td>
+    <td>15pln</td>
+    <td>
+        <ul class="list-actions">
+            <li>
+                <a class="details" href="drinks/details">Szczegóły</a>
+                <a class="infoIcon" href="drinks/details"><i class="fas fa-info-circle"></i></a>
+            </li>
+            <li>
+                <a class="edit" href="">Edytuj</a>
+                <a href=""><i class="fas fa-edit"></i></a>
+            </li>
+            <li>
+                <a class="delete" href="">Usuń</a>
+                <a href=""><i class="fas fa-trash"></i></a>
+            </li>
+        </ul>
+    </td>
+</tr>
+<tr>
+    <td>Mojito</td>
+    <td>22pln</td>
+    <td>
+        <ul class="list-actions">
+            <li>
+                <a class="details" href="drinks/details">Szczegóły</a>
+                <a href="drinks/details"><i class="fas fa-info-circle"></i></a>
+            </li>
+            <li>
+                <a class="edit" href="">Edytuj</a>
+                <a href=""><i class="fas fa-edit"></i></a>
+            </li>
+            <li>
+                <a class="delete" href="">Usuń</a>
+                <a href=""><i class="fas fa-trash"></i></a>
+            </li>
+        </ul>
+    </td>
+</tr> -->
