@@ -24,7 +24,7 @@ exports.createDrink = (newDrinkData) => {
         name: newDrinkData.name,
         prize: newDrinkData.prize,
         description: newDrinkData.description,
-        serve: newDrinkData.serve,
+        serve: newDrinkData.serve
     });
 };
 

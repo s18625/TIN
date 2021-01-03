@@ -10,11 +10,30 @@ const Ingreadient = sequelize.define('Ingreadient', {
     },
     name: {
         type: Sequelize.STRING,
-        allowNull: false
+        allowNull: false,
+        validate: {
+            notEmpty: {
+                msg: "Pole jest wymagane"
+            },
+            len: {
+                args: [2, 60],
+                msg: "Pole powinno zawierać od 2 do 60 znaków"
+            },
+        }
     },
     costPer100g: {
         type: Sequelize.INTEGER,
-        allowNull: false
+        allowNull: false,
+        validate: {
+            notEmpty: {
+                msg: "Pole jest wymagane"
+            },
+            isInt: {
+                msg: "Pole musi zawierac liczbe calkowita dodatnia"
+            },
+
+        }
+
     },
     description: {
         type: Sequelize.STRING,

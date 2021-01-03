@@ -60,10 +60,10 @@ exports.showDrinkDetails = (req, res, next) => {
 //     });
 // }
 exports.addDrink = (req, res, next) => {
-    const drinkData = {
+    const newDrinkData = {
         ...req.body
     };
-    DrinkRepository.createDrink(drinkData)
+    DrinkRepository.createDrink(newDrinkData)
         .then(result => {
             res.redirect('/drinks');
         });
@@ -77,6 +77,17 @@ exports.updateDrink = (req, res, next) => {
     DrinkRepository.updateDrink(drinkId, drinkData)
         .then(result => {
             res.redirect('/drinks');
+        })
+        .catch(err => {
+            res.render('pages/drink_form', {
+                drink: drinkData,
+                pageTitle: 'Nowy Drink',
+                formMode: 'createNew',
+                btnLabel: 'Dodaj drinka',
+                formAction: '/drinks/add',
+                navLocation: 'drinks',
+                validationErrors: err.errors
+            });
         });
 };
 
@@ -87,25 +98,3 @@ exports.deleteDrink = (req, res, next) => {
             res.redirect('/drinks');
         });
 };
-
-exports.showAddProportionForm = (req, res, next) => {
-    let allDrinks, allIngre;
-    DrinkRepository.getDrinks()
-        .then(drinks => {
-            allDrinks = drinks;
-            return IngreadientRepository.getIngreadients();
-        })
-        .then(ingres => {
-            allIngre = ingres;
-            res.render('pages/proportion-form', {
-                proportion: {},
-                formMode: 'createNew',
-                allDrinks: allDrinks,
-                allIngres: allIngre,
-                pageTitle: 'Nowa proporcja',
-                btnLabel: 'Dodaj proporcje',
-                formAction: '/proportion/add',
-                navLocation: 'proportion'
-            });
-        });
-}

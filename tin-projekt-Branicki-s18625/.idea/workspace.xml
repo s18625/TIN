@@ -20,27 +20,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="614073b7-490e-4f96-8aa2-8a14466a5c98" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../CSS/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../images/drink2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../images/drink3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../images/drink4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../images/drinki.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../images/neon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../js/validationCommon.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../js/validationDrinkForm.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../js/validationIngreadientForm.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../js/validationProportionForm.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pages/drink_details.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pages/drink_form.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pages/drinks.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pages/galery.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pages/ingreadient.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pages/ingreadient_details.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pages/ingreadient_form.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pages/proportion-form.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pages/proportion.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pages/proprtion-details.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/drinkController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/drinkController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/ingreadientController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/ingreadientController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/proportionController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/proportionController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/sequelize/DrinkRepository.js" beforeDir="false" afterPath="$PROJECT_DIR$/repository/sequelize/DrinkRepository.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/ingreadientRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/ingreadientRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/proporionRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/proporionRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/pages/drink_form.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/drink_form.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/pages/drinks.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/drinks.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/pages/ingreadient.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/ingreadient.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/pages/ingreadient_form.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/ingreadient_form.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/pages/proportion-form.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/proportion-form.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/pages/proportion.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/proportion.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/pages/proprtion-details.ejs" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +60,7 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../GRK/cwiczenia/cw4-Przekształcenia_aficzne" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../../home/KursReact" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.editor.code.editing" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -114,6 +107,9 @@
       <workItem from="1607642881085" duration="36000" />
       <workItem from="1607676299899" duration="676000" />
       <workItem from="1607712711885" duration="9112000" />
+      <workItem from="1608560548615" duration="26000" />
+      <workItem from="1609589752172" duration="1110000" />
+      <workItem from="1609622543766" duration="7382000" />
     </task>
     <servers />
   </component>
@@ -137,10 +133,10 @@
       <screen x="0" y="0" width="2194" height="1204" />
     </state>
     <state x="1406" y="400" key="#com.intellij.fileTypes.FileTypeChooser/0.0.2194.1204@0.0.2194.1204" timestamp="1607724147012" />
-    <state x="1425" y="357" key="FileChooserDialogImpl" timestamp="1607594525076">
+    <state x="1425" y="357" key="FileChooserDialogImpl" timestamp="1608560571491">
       <screen x="0" y="0" width="2194" height="1204" />
     </state>
-    <state x="1425" y="357" key="FileChooserDialogImpl/0.0.2194.1204@0.0.2194.1204" timestamp="1607594525076" />
+    <state x="1425" y="357" key="FileChooserDialogImpl/0.0.2194.1204@0.0.2194.1204" timestamp="1608560571491" />
     <state width="1076" height="327" key="GridCell.Tab.0.bottom" timestamp="1607025201943">
       <screen x="0" y="0" width="2194" height="1204" />
     </state>

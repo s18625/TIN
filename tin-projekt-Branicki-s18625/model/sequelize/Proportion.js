@@ -10,11 +10,22 @@ const Proportion = sequelize.define('Proportion', {
     },
     grammage: {
         type: Sequelize.INTEGER,
-        allowNull: false
+        allowNull: false,
+        validate: {
+            notEmpty: {
+                msg: "Pole jest wymagane"
+            },
+
+        }
     },
     costByGrammage: {
         type: Sequelize.INTEGER,
-        allowNull: false
+        allowNull: false,
+        validate: {
+            notEmpty: {
+                msg: "Pole jest wymagane"
+            }
+        }
     },
     drink_id: {
         type: Sequelize.INTEGER,

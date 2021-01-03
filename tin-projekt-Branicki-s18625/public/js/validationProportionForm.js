@@ -1,4 +1,4 @@
-function validateProportion() {
+function validateForm() {
     let errorResponse = '';
     const drinkInput = document.getElementById('drink');
     const ingreadientInput = document.getElementById('ingreadient');

@@ -1,4 +1,4 @@
-function validateIngreadient() {
+function validateForm() {
     let errorResponse = '';
     const nameInput = document.getElementById('Name');
     const costInput = document.getElementById('Cost');

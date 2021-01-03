@@ -5,56 +5,45 @@
     <table class="table-list">
         <thead>
             <tr>
-                <th>Nazwa</th>
+                <th>Drink</th>
                 <th>Skladnik</th>
                 <th></th>
             </tr>
         </thead>
-        <tbody>
-            <tr>
-                <td>Jagerbomb</td>
-                <td>Redbull</td>
-                <td>
-                    <ul class="list-actions">
-                        <li>
-                            <a class="details" href="proprtion-details.html">Szczegóły</a>
-                            <a class="infoIcon" href="proprtion-details.html"><i class="fas fa-info-circle"></i></a>
-                        </li>
-                        <li>
-                            <a class="edit" href="">Edytuj</a>
-                            <a href=""><i class="fas fa-edit"></i></a>
-                        </li>
-                        <li>
-                            <a class="delete" href="">Usuń</a>
-                            <a href=""><i class="fas fa-trash"></i></a>
-                        </li>
-                    </ul>
-                </td>
-            </tr>
-            <tr>
-                <td>Jagerbomb</td>
-                <td>Jagermeister</td>
-                <td>
-                    <ul class="list-actions">
-                        <li>
-                            <a class="details" href="proprtion-details.html">Szczegóły</a>
-                            <a class="infoIcon" href="proprtion-details.html"><i class="fas fa-info-circle"></i></a>
-                        </li>
-                        <li>
-                            <a class="edit" href="">Edytuj</a>
-                            <a href=""><i class="fas fa-edit"></i></a>
-                        </li>
-                        <li>
-                            <a class="delete" href="">Usuń</a>
-                            <a href=""><i class="fas fa-trash"></i></a>
-                        </li>
-                    </ul>
-                </td>
-            </tr>
 
+        <tbody>
+            <% for (let prop of props) {
+                let dId = prop.drink_id  ;
+                let drink = allDrinks.find( drink => drink._id == dId);
+                let iId = prop.ingre_id ;
+                let ingre = allIngre.find(ingre => ingre._id === iId)  %>
+            <tr>
+                <td><%= drink.name %></td>
+                <td><%= ingre.name  %></td>
+                <td>
+                    <ul class="list-actions">
+                        <li>
+                            <a href="/proportion/details/<%=prop._id%>" class="details">Szczegóły</a>
+                            <a class="infoIcon" href="/proportion/details/<%=prop._id%>">
+                                <i class="fas fa-info-circle"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/proportion/edit/<%=prop._id%>" class="edit">Edytuj</a>
+                            <a href="/proportion/edit/<%=prop._id%>"><i class="fas fa-edit"></i></a>
+                        </li>
+                        <li>
+                            <a href="/proportion/delete/<%=prop._id%>" class="delete">Usuń</a>
+                            <a href="/proportion/delete/<%=prop._id%>"><i class="fas fa-trash"></i></a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+            <% } %>
         </tbody>
+
     </table>
-    <a class="button-add" href="proportion-form.html">Dodaj nowa Proporcje</a>
+    <a class="button-add" href="proportion/add">Dodaj nowa Proporcje</a>
 
 
 </main>

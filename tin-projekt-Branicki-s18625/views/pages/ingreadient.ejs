@@ -11,50 +11,34 @@
             </tr>
         </thead>
         <tbody>
+            <% for (let ingre of ingres) { %>
             <tr>
-                <td>Jagermeister</td>
-                <td>15pln</td>
+                <td><%= ingre.name %></td>
+                <td><%= ingre.costPer100g %></td>
                 <td>
                     <ul class="list-actions">
                         <li>
-                            <a class="details" href="ingreadient_details.html">Szczegóły</a>
-                            <a class="infoIcon" href="ingreadient_details.html"><i class="fas fa-info-circle"></i></a>
+                            <a href="/ingreadient/details/<%=ingre._id%>" class="details">Szczegóły</a>
+                            <a class="infoIcon" href="/ingreadient/details/<%=ingre._id%>"><i
+                                    class="fas fa-info-circle"></i></a>
                         </li>
                         <li>
-                            <a class="edit" href="">Edytuj</a>
-                            <a href=""><i class="fas fa-edit"></i></a>
+                            <a href="/ingreadient/edit/<%= ingre._id%>" class="edit">Edytuj</a>
+                            <a href="/ingreadient/edit/<%= ingre._id%>"><i class="fas fa-edit"></i></a>
                         </li>
-                        <li>
-                            <a class="delete" href="">Usuń</a>
-                            <a href=""><i class="fas fa-trash"></i></a>
-                        </li>
-                    </ul>
-                </td>
-            </tr>
-            <tr>
-                <td>RedBull</td>
-                <td>3pln</td>
-                <td>
-                    <ul class="list-actions">
-                        <li>
-                            <a class="details" href="ingreadient_details.html">Szczegóły</a>
-                            <a class="infoIcon" href="ingreadient_details.html"><i class="fas fa-info-circle"></i></a>
-                        </li>
-                        <li>
-                            <a class="edit" href="">Edytuj</a>
-                            <a href=""><i class="fas fa-edit"></i></a>
-                        </li>
-                        <li>
-                            <a class="delete" href="">Usuń</a>
-                            <a href=""><i class="fas fa-trash"></i></a>
-                        </li>
-                    </ul>
-                </td>
-            </tr>
 
+                        <li>
+                            <a href="/ingreadient/delete/<%=ingre._id%>" class="delete">Usuń</a>
+                            <a href="/ingreadient/delete/<%=ingre._id%>"><i class="fas fa-trash"></i></a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+            <% } %>
         </tbody>
+
     </table>
-    <a class="button-add" href="ingreadient_form.html" .html">Dodaj nowy skladnik</a>
+    <a class="button-add" href="ingreadient/add" .html">Dodaj nowy skladnik</a>
 
 
 </main>

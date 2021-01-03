@@ -1,34 +1,73 @@
 <%- include('../fragments/header.ejs') %>
 <main>
-    <h2>Formularz Skladnika</h2>
-    <form class="form" action="" novalidate onsubmit="return validateIngreadient();">
+    <script type="application/javascript" src="/public/js/validationIngreadientForm.js"></script>
+    <h2><%= pageTitle %></h2>
+    <form class="form" method="post" action="<%=formAction%>" novalidate onsubmit="return validateIngreadient();">
+        <input type="hidden" name="_id" value="<%= ingre._id %>">
 
-        <label for="Name">Nazwa:<span>* </span></label>
-        <input type="text" name="Name" id="Name">
+
+        <label for="name">Nazwa:<span>* </span></label>
+        <input type="text" name="name" id="name" placeholder="2-60 znaków" value="<%= ingre.name %>"
+            <%= (formMode == 'showDetails') ? 'disabled' : '' %> />
         <span id="errorName" class="errors-text required "></span>
 
 
-        <label for="Cost">Cena(pln/100g)<span>* </span></label>
-        <input type="number" name="Cost" id="Cost">
+        <label for="costPer100g">Cena(pln/100g)<span>* </span></label>
+        <input type="number" name="costPer100g" id="costPer100g" placeholder="2-60 znaków"
+            value="<%= ingre.costPer100g %>" <%= (formMode == 'showDetails') ? 'disabled' : '' %> />
         <span id="errorCost" class="errors-text required "></span>
 
 
-        <label for="Description">Opis skladnika:</label>
-        <textarea name="" id="Description" cols="30" rows="10"></textarea>
+        <label for="description">Opis skladnika:</label>
+        <input type="text" name="description" id="description" placeholder="wprowadz opis"
+            value="<%= ingre.description %>" <%= (formMode == 'showDetails') ? 'disabled' : '' %> />
+
         <span id="errorDescription" class="errors-text required "></span>
 
-
+        <% if (formMode == 'showDetails') { %>
+        <div class="section-buttons">
+            <a href="/ingreadient/edit/<%= emp._id %>" class="edit">Edytuj</a>
+        </div>
+        <% } %>
         <div class="form-buttons">
-            <p id="errorsSummary" class="errors-text required ">
-                <span> Pola z "<span class="gwiazdka">*</span>" sa wymagane
-                </span>
-            </p>
-            <input class="form-button-submit" type="submit" value="Dodaj skladnik" />
-            <a class="form-button-cancel" href="../index.html">Anuluj</a>
+            <p id="errorsSummary" class="errors-text required"> <span> Pola z "<span class="gwiazdka">*</span>" sa
+                    wymagane
+                </span></p>
+            <% if (formMode != 'showDetails') { %>
+            <input class="form-button-submit" type="submit" value="<%=btnLabel%>" />
+            <a class="form-button-cancel" href="/ingreadient">Anuluj</a>
+            <% } else { %>
+            <a class="form-button-cancel" href="/ingreadient">Powrót</a>
+            <% } %>
         </div>
 
 
     </form>
+
+    <% if (formMode == 'showDetails' || formMode == 'edit') { %>
+    <h2>
+        Szczegóły drinka
+    </h2>
+    <table class="table-list">
+        <thead>
+            <tr>
+                <th>Drink</th>
+                <th>Grmatura</th>
+                <th>Cena gramatury</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% for (let p of ingre.proportions) { %>
+            <tr>
+                <td><a href="/ingreadient/details/<%= p.ingreadient._id %>"><%= p.ingreadient.name %></a></td>
+                <td><%= p.grammage %></td>
+                <td><%= p.costByGrammage %></td>
+            </tr>
+            <% } %>
+        </tbody>
+    </table>
+    <% } %>
+
 
 </main>
 <%- include('../fragments/footer.ejs') %>

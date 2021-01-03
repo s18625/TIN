@@ -1,47 +1,66 @@
 <%- include('../fragments/header.ejs') %>
 <main>
-    <h2>Formularz proporcji</h2>
-    <form class="form" action="" novalidate onsubmit="return validateProportion();">
+    <script type="application/javascript" src="/public/js/validationProportionForm.js"></script>
+    <h2><%= pageTitle %></h2>
+    <form class="form" method="post" action="<%= formAction%>" novalidate onsubmit=" return validateProportion();">
+        <input type="hidden" name="_id" value="<%= proportion._id %>">
 
-        <label for="Name">Drink:<span>* </span></label>
-        <select name="drinks" id="drink">
-            <option value="" disabled selected hidden>--wybierz drinka--</option>
-            <option value="Jagerbomb">Jagerbomb</option>
-            <option value="Mojito">Mojito</option>
-            <option value="Sex on the beach">Sex on the beach</option>
-            <option value="Cosmopolitan">Cosmopolitan</option>
+        <label for="drink_id">Drink:<span>* </span></label>
+
+        <select id="drink_id" name="drink_id" required <%= (formMode == 'showDetails') ? 'disabled' : ''%>>
+            <option value="" selected>--- Wybierz drinka ---</option>
+            <% for (let i=0; i<allDrinks.length; i++) { let drink = allDrinks[i]; %>
+            <option value="<%= drink._id %>" label="<%= drink.name %>"
+                <%= (proportion._id && drink._id.toString() == proportion.drink._id.toString()) ? 'selected' : ''%>>
+            </option>
+            <% } %>
         </select>
+
         <span id="errorDrink" class="errors-text required "></span>
 
 
-        <label for="Cost">Skladnik:<span>* </span></label>
-        <select name="cars" id="ingreadient">
-            <option value="" disabled selected hidden>--wybierz skladnik--</option>
-            <option value="Red bull">Red bull</option>
-            <option value="Jagermeister">Jagermeister</option>
-            <option value="wodka">wodka</option>
-            <option value="Sok pomaranczowy">Sok pomaranczowy</option>
+        <label for="ingre_id">Skladnik:<span>* </span></label>
+        <select id="ingre_id" name="ingre_id" required <%= (formMode == 'showDetails') ? 'disabled' : ''%>>
+            <option value="" selected>--- Wybierz Skladnik ---</option>
+            <% for (let i=0; i<allIngre.length; i++) { let ingre = allIngre[i]; %>
+            <option value="<%= ingre._id %>" label="<%= ingre.name %>"
+                <%= (proportion._id && ingre._id.toString() == proportion.ingreadient._id.toString()) ? 'selected' : ''%>>
+            </option>
+            <% } %>
         </select>
         <span id="errorIngreadient" class="errors-text required "></span>
 
 
-        <label for="Description">Gramatura:<span>* </span></label>
-        <input type="number" name="Description" id="gram">
+        <label for="grammage">Gramatura:<span>* </span></label>
+        <input type="number" name="grammage" id="grammage" placeholder="liczba dodatnia"
+            value="<%= proportion.grammage %>" <%= (formMode == 'showDetails') ? 'disabled' : '' %> />
         <span id="errorGram" class="errors-text required "></span>
+
+        <label for="costByGrammage">Koszt gramatury:<span>* </span></label>
+        <input type="number" name="costByGrammage" id="costByGrammage" placeholder=""
+            value="<%= proportion.costByGrammage %>" <%= (formMode == 'showDetails') ? 'disabled' : '' %>>
+        <span id="errorCostByGrammage" class="errors-text required "></span>
+
 
 
 
         <div class="form-buttons">
-            <p id="errorsSummary" class="errors-text required ">
+            <p id="errorsSummary" class="errors-text required">
                 <span> Pola z "<span class="gwiazdka">*</span>" sa wymagane
                 </span>
             </p>
-            <input class="form-button-submit" type="submit" value="Dodaj proporcję" />
-            <a class="form-button-cancel" href="../index.html">Anuluj</a>
+            <% if (formMode != 'showDetails') { %>
+            <input class="form-button-submit" type="submit" value="<%=btnLabel%>" />
+            <a class="form-button-cancel" href="/proportion">Anuluj</a>
+            <% } else { %>
+            <a class="form-button-cancel" href="/proportion">Powrót</a>
+            <% } %>
         </div>
 
 
     </form>
+
+
 
 </main>
 <%- include('../fragments/footer.ejs') %>
