@@ -1,6 +1,6 @@
 <%- include('../fragments/header.ejs') %>
 <main>
-    <script type="application/javascript" src="/public/js/validationProportionForm.js"></script>
+    <script type="application/javascript" src="/js/validationProportionForm.js"></script>
     <h2><%= pageTitle %></h2>
     <form class="form" method="post" action="<%= formAction%>" novalidate onsubmit=" return validateProportion();">
         <input type="hidden" name="_id" value="<%= proportion._id %>">

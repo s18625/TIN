@@ -1,6 +1,6 @@
 <%- include('../fragments/header.ejs') %>
 <main>
-    <script type="application/javascript" src="/public/js/validationIngreadientForm.js"></script>
+    <script type="application/javascript" src="/js/validationIngreadientForm.js"></script>
     <h2><%= pageTitle %></h2>
     <form class="form" method="post" action="<%=formAction%>" novalidate onsubmit="return validateIngreadient();">
         <input type="hidden" name="_id" value="<%= ingre._id %>">

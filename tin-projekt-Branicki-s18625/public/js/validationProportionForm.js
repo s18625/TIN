@@ -1,8 +1,8 @@
-function validateForm() {
+function validateProportion() {
     let errorResponse = '';
-    const drinkInput = document.getElementById('drink');
-    const ingreadientInput = document.getElementById('ingreadient');
-    const gramInput = document.getElementById('gram');
+    const drinkInput = document.getElementById('drink_id');
+    const ingreadientInput = document.getElementById('ingre_id');
+    const gramInput = document.getElementById('grammage');
     // let arrInput = [nameInput, costInput, descriptionInput];
     //////////////////////errors///////////////////////////////////
     const errorDrink = document.getElementById('errorDrink');

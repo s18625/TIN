@@ -1,8 +1,8 @@
-function validateForm() {
+function validateIngreadient() {
     let errorResponse = '';
-    const nameInput = document.getElementById('Name');
-    const costInput = document.getElementById('Cost');
-    const descriptionInput = document.getElementById('Description');
+    const nameInput = document.getElementById('name');
+    const costInput = document.getElementById('costPer100g');
+    const descriptionInput = document.getElementById('description');
     // let arrInput = [nameInput, costInput, descriptionInput];
     //////////////////////errors///////////////////////////////////
     const errorName = document.getElementById('errorName');

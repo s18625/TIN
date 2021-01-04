@@ -1,6 +1,7 @@
 <%- include('../fragments/header.ejs') %>
 <main>
-    <script type="application/javascript" src="/public/js/validationDrinkForm.js"></script>
+
+    <script type="application/javascript" src="/js/validationDrinkForm.js"></script>
     <h2><%= pageTitle %></h2>
     <form class="form" method="post" action="<%=formAction%>" novalidate onsubmit="return validateDrink();">
         <input type="hidden" name="_id" value="<%= drink._id %>">
