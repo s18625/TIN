@@ -9,19 +9,40 @@
         <label for="name">Nazwa:<span>* </span></label>
         <input type="text" name="name" id="name" placeholder="2-60 znaków" value="<%= drink.name %>"
             <%= (formMode == 'showDetails') ? 'disabled' : '' %>>
-        <span id="errorName" class="errors-text required "></span>
+        <span id="errorName" class="errors-text required ">
+            <% if(validationErrors) {
+                    if (validationErrors.find(e => e.path.includes('name'))) { %>
+            <%= validationErrors.find(e => e.path.includes('name')).message %>
+            <% }
+                 }
+             %>
+        </span>
 
 
         <label for="prize">Cena:<span>* </span></label>
         <input type="number" name="prize" id="prize" placeholder="liczba dodatnia" value="<%= drink.prize %>"
             <%= (formMode == 'showDetails') ? 'disabled' : '' %>>
 
-        <span id="errorCost" class="errors-text required "></span>
+        <span id="errorCost" class="errors-text required ">
+            <% if(validationErrors) {
+                if (validationErrors.find(e => e.path.includes('prize'))) { %>
+            <%= validationErrors.find(e => e.path.includes('prize')).message %>
+            <% }
+             }
+         %>
+        </span>
 
         <label for="description">Opis:<span>* </span></label>
         <input type="text" name="description" id="description" placeholder="2-60 znaków"
             value="<%= drink.description %>" <%= (formMode == 'showDetails') ? 'disabled' : '' %>>
-        <span id="errorDescription" class="errors-text required "></span>
+        <span id="errorDescription" class="errors-text required ">
+            <% if(validationErrors) {
+                if (validationErrors.find(e => e.path.includes('description'))) { %>
+            <%= validationErrors.find(e => e.path.includes('description')).message %>
+            <% }
+             }
+         %>
+        </span>
 
 
         <label for="Podanie">Propozycja podania:</label>

@@ -10,15 +10,43 @@ const Drink = sequelize.define('Drink', {
     },
     name: {
         type: Sequelize.STRING,
-        allowNull: false
+        allowNull: false,
+        validate: {
+            notEmpty: {
+                msg: "Pole jest wymagane"
+            },
+            len: {
+                args: [2, 60],
+                msg: "Pole powinno zawierać od 2 do 60 znaków"
+            },
+        }
     },
     prize: {
         type: Sequelize.INTEGER,
-        allowNull: false
+        allowNull: false,
+        validate: {
+            notEmpty: {
+                msg: "Pole jest wymagane"
+            },
+            isInt: {
+                min: 0,
+                max: 1000,
+                msg: "Pole musi zawierac liczbe z przedzialu od 0 do 1000"
+            },
+        }
     },
     description: {
         type: Sequelize.STRING,
         allowNull: false,
+        validate: {
+            notEmpty: {
+                msg: "Pole jest wymagane"
+            },
+            len: {
+                args: [2, 60],
+                msg: "Pole powinno zawierać od 2 do 60 znaków"
+            },
+        }
     },
     serve: {
         type: Sequelize.STRING,

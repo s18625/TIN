@@ -19,7 +19,8 @@ exports.showAddDrinkForm = (req, res, next) => {
         formMode: 'createNew',
         btnLabel: 'Dodaj drinka',
         formAction: '/drinks/add',
-        navLocation: 'drinks'
+        navLocation: 'drinks',
+        validationErrors: null,
     });
     // res.render('pages/drink_form', {
     //     navLocation: 'drinks'
@@ -36,7 +37,8 @@ exports.showEditDrinkForm = (req, res, next) => {
                 pageTitle: 'Edycja drinka',
                 btnLabel: 'Edytuj drinka',
                 formAction: '/drinks/edit',
-                navLocation: 'drinks'
+                navLocation: 'drinks',
+                validationErrors: null,
             });
         });
 };
@@ -50,7 +52,8 @@ exports.showDrinkDetails = (req, res, next) => {
                 formMode: 'showDetails',
                 pageTitle: 'Szczegóły drinka',
                 formAction: '',
-                navLocation: 'drinks'
+                navLocation: 'drinks',
+                validationErrors: null,
             });
         });
 }
@@ -66,6 +69,17 @@ exports.addDrink = (req, res, next) => {
     DrinkRepository.createDrink(newDrinkData)
         .then(result => {
             res.redirect('/drinks');
+        })
+        .catch(err => {
+            res.render('pages/drink_form', {
+                drink: newDrinkData,
+                pageTitle: 'Nowy Drink',
+                formMode: 'createNew',
+                btnLabel: 'Dodaj drinka',
+                formAction: '/drinks/add',
+                navLocation: 'drinks',
+                validationErrors: err.errors
+            });
         });
 };
 

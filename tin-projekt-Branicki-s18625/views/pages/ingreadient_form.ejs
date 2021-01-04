@@ -9,20 +9,41 @@
         <label for="name">Nazwa:<span>* </span></label>
         <input type="text" name="name" id="name" placeholder="2-60 znaków" value="<%= ingre.name %>"
             <%= (formMode == 'showDetails') ? 'disabled' : '' %> />
-        <span id="errorName" class="errors-text required "></span>
+        <span id="errorName" class="errors-text required ">
+            <% if(validationErrors) {
+                if (validationErrors.find(e => e.path.includes('name'))) { %>
+            <%= validationErrors.find(e => e.path.includes('name')).message %>
+            <% }
+             }
+         %>
+        </span>
 
 
         <label for="costPer100g">Cena(pln/100g)<span>* </span></label>
-        <input type="number" name="costPer100g" id="costPer100g" placeholder="2-60 znaków"
+        <input type="number" name="costPer100g" id="costPer100g" placeholder="wartosc od 0 do 1000"
             value="<%= ingre.costPer100g %>" <%= (formMode == 'showDetails') ? 'disabled' : '' %> />
-        <span id="errorCost" class="errors-text required "></span>
+        <span id="errorCost" class="errors-text required ">
+            <% if(validationErrors) {
+                if (validationErrors.find(e => e.path.includes('costPer100g'))) { %>
+            <%= validationErrors.find(e => e.path.includes('costPer100g')).message %>
+            <% }
+             }
+         %>
+        </span>
 
 
         <label for="description">Opis skladnika:</label>
         <input type="text" name="description" id="description" placeholder="wprowadz opis"
             value="<%= ingre.description %>" <%= (formMode == 'showDetails') ? 'disabled' : '' %> />
 
-        <span id="errorDescription" class="errors-text required "></span>
+        <span id="errorDescription" class="errors-text required ">
+            <% if(validationErrors) {
+                if (validationErrors.find(e => e.path.includes('description'))) { %>
+            <%= validationErrors.find(e => e.path.includes('description')).message %>
+            <% }
+             }
+         %>
+        </span>
 
         <% if (formMode == 'showDetails') { %>
         <div class="section-buttons">

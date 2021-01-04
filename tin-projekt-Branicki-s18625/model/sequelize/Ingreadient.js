@@ -29,7 +29,9 @@ const Ingreadient = sequelize.define('Ingreadient', {
                 msg: "Pole jest wymagane"
             },
             isInt: {
-                msg: "Pole musi zawierac liczbe calkowita dodatnia"
+                min: 0,
+                max: 1000,
+                msg: "Pole musi zawierac liczbe z przedzialu 1-1000"
             },
 
         }
@@ -37,7 +39,16 @@ const Ingreadient = sequelize.define('Ingreadient', {
     },
     description: {
         type: Sequelize.STRING,
-        allowNull: false
+        allowNull: false,
+        validate: {
+            notEmpty: {
+                msg: "Pole jest wymagane"
+            },
+            len: {
+                args: [2, 60],
+                msg: "Pole powinno zawierać od 2 do 60 znaków"
+            },
+        }
     }
 
 });

@@ -15,6 +15,11 @@ const Proportion = sequelize.define('Proportion', {
             notEmpty: {
                 msg: "Pole jest wymagane"
             },
+            isInt: {
+                min: 0,
+                max: 1000,
+                msg: "Pole musi zawierac liczbe z przedzialu 1-1000"
+            },
 
         }
     },
@@ -24,7 +29,12 @@ const Proportion = sequelize.define('Proportion', {
         validate: {
             notEmpty: {
                 msg: "Pole jest wymagane"
-            }
+            },
+            isInt: {
+                min: 0,
+                max: 1000,
+                msg: "Pole musi zawierac liczbe z przedzialu 1-1000"
+            },
         }
     },
     drink_id: {

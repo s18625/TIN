@@ -33,7 +33,8 @@ exports.showAddIngreadientsForm = (req, res, next) => {
         formMode: 'createNew',
         btnLabel: 'Dodaj skladnik',
         formAction: '/ingreadient/add',
-        navLocation: 'ingreadient'
+        navLocation: 'ingreadient',
+        validationErrors: null,
     });
 }
 
@@ -48,7 +49,8 @@ exports.showEditIngreadientForm = (req, res, next) => {
                 pageTitle: 'Edycja skladnika',
                 btnLabel: 'Edytuj skladnik',
                 formAction: '/ingreadient/edit',
-                navLocation: 'ingreadient'
+                navLocation: 'ingreadient',
+                validationErrors: null,
             });
         });
 };
@@ -62,7 +64,8 @@ exports.showIngreadientDetails = (req, res, next) => {
                 formMode: 'showDetails',
                 pageTitle: 'Szczegóły skladnika',
                 formAction: '',
-                navLocation: 'ingreadient'
+                navLocation: 'ingreadient',
+                validationErrors: null,
             });
         });
 }
@@ -78,7 +81,7 @@ exports.addIngreadient = (req, res, next) => {
         })
         .catch(err => {
             res.render('pages/ingreadient_form', {
-                ingre: {},
+                ingre: ingreData,
                 pageTitle: 'Nowy skladnmik',
                 formMode: 'createNew',
                 btnLabel: 'Dodaj skladnik',
