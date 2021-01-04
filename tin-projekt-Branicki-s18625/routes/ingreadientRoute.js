@@ -3,7 +3,7 @@ const router = express.Router();
 const ingreadientController = require('../controllers/ingreadientController');
 router.get('/', ingreadientController.showIngreadientsList);
 router.get('/add', ingreadientController.showAddIngreadientsForm);
-router.get('/details/:ingreadientId?', ingreadientController.showIngreadientsDetails);
+router.get('/details/:ingreId', ingreadientController.showIngreadientsDetails);
 router.get('/edit/:ingreId', ingreadientController.showEditIngreadientForm);
 router.post('/add', ingreadientController.addIngreadient);
 router.post('/edit', ingreadientController.updateIngreadient);

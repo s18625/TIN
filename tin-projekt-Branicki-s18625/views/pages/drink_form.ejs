@@ -82,8 +82,11 @@
         <tbody>
             <% for (let p of drink.proportions) { %>
             <tr>
-                <td><a href="/ingreadients/details/<%= p.ingreadient._id %>"
-                        style="text-decoration: none; color: whitesmoke;"><%= p.ingreadient.name %></a></td>
+                <td>
+                    <a href="/ingreadients/details/<%= p.ingreadient._id %>"
+                        style="text-decoration: none; color: whitesmoke;"><%= p.ingreadient.name %>
+                    </a>
+                </td>
                 <td><%= p.grammage %></td>
                 <td><%= p.costByGrammage %></td>
             </tr>

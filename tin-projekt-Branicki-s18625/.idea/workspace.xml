@@ -21,19 +21,11 @@
   <component name="ChangeListManager">
     <list default="true" id="614073b7-490e-4f96-8aa2-8a14466a5c98" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/drinkController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/drinkController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/ingreadientController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/ingreadientController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/proportionController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/proportionController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/repository/sequelize/DrinkRepository.js" beforeDir="false" afterPath="$PROJECT_DIR$/repository/sequelize/DrinkRepository.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/ingreadientRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/ingreadientRoute.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/proporionRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/proporionRoute.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/pages/drink_form.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/drink_form.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/pages/drinks.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/drinks.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/pages/ingreadient.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/ingreadient.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/pages/ingreadient_form.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/ingreadient_form.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/pages/proportion-form.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/proportion-form.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/pages/proportion.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/proportion.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/pages/proprtion-details.ejs" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,6 +102,7 @@
       <workItem from="1608560548615" duration="26000" />
       <workItem from="1609589752172" duration="1110000" />
       <workItem from="1609622543766" duration="7382000" />
+      <workItem from="1609788021604" duration="5439000" />
     </task>
     <servers />
   </component>

@@ -47,7 +47,7 @@
 
         <% if (formMode == 'showDetails') { %>
         <div class="section-buttons">
-            <a href="/ingreadient/edit/<%= emp._id %>" class="edit">Edytuj</a>
+            <a href="/ingreadient/edit/<%= ingre._id %>" class="edit">Edytuj</a>
         </div>
         <% } %>
         <div class="form-buttons">
@@ -67,7 +67,7 @@
 
     <% if (formMode == 'showDetails' || formMode == 'edit') { %>
     <h2>
-        Szczegóły drinka
+        Szczegóły proporcji
     </h2>
     <table class="table-list">
         <thead>
@@ -80,7 +80,8 @@
         <tbody>
             <% for (let p of ingre.proportions) { %>
             <tr>
-                <td><a href="/ingreadient/details/<%= p.ingreadient._id %>"><%= p.ingreadient.name %></a></td>
+                <td><a href="/ingreadient/details/<%= p.ingre_id %>"
+                        style="text-decoration: none; color: whitesmoke;"><%= p.drink.name %></a></td>
                 <td><%= p.grammage %></td>
                 <td><%= p.costByGrammage %></td>
             </tr>

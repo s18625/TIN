@@ -21,9 +21,18 @@ exports.showIngreadientsForm = (req, res, next) => {
 
 
 exports.showIngreadientsDetails = (req, res, next) => {
-    res.render('pages/ingreadient_details', {
-        navLocation: 'ingreadient'
-    });
+    const ingreId = req.params.ingreId;
+    IngreadientRepository.getIngreadientById(ingreId)
+        .then(ingre => {
+            res.render('pages/ingreadient_form', {
+                ingre: ingre,
+                formMode: 'showDetails',
+                pageTitle: 'Szczegóły skladnika',
+                formAction: '',
+                navLocation: 'ingreadient',
+                validationErrors: null,
+            });
+        });
 }
 
 exports.showAddIngreadientsForm = (req, res, next) => {
@@ -60,7 +69,7 @@ exports.showIngreadientDetails = (req, res, next) => {
     IngreadientRepository.getIngreadientById(ingreId)
         .then(ingre => {
             res.render('pages/ingreadient_form', {
-                ingre: ingre,
+                ingreadient: ingre,
                 formMode: 'showDetails',
                 pageTitle: 'Szczegóły skladnika',
                 formAction: '',
@@ -81,7 +90,7 @@ exports.addIngreadient = (req, res, next) => {
         })
         .catch(err => {
             res.render('pages/ingreadient_form', {
-                ingre: ingreData,
+                ingre: {},
                 pageTitle: 'Nowy skladnmik',
                 formMode: 'createNew',
                 btnLabel: 'Dodaj skladnik',

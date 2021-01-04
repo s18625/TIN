@@ -150,7 +150,7 @@ exports.addProportion = (req, res, next) => {
                 .then(ingres => {
                     allIngre = ingres;
                     res.render('pages/proportion-form', {
-                        proportion: {},
+                        proportion: propData,
                         pageTitle: 'Nowa proporcja',
                         formMode: 'createNew',
                         allDrinks: allDrinks,
