@@ -48,7 +48,8 @@ exports.showAddProportionForm = (req, res, next) => {
                 allIngre: allIngre,
                 btnLabel: 'Dodaj proporcje',
                 formAction: '/proportion/add',
-                navLocation: 'proportion'
+                navLocation: 'proportion',
+                validationErrors: null,
             });
         });
 }
@@ -94,7 +95,8 @@ exports.showEditProportionForm = (req, res, next) => {
                 pageTitle: 'Edycja proporcji',
                 btnLabel: 'Edytuj proporcje',
                 formAction: '/proportion/edit',
-                navLocation: 'proportion'
+                navLocation: 'proportion',
+                validationErrors: null,
             });
 
         });
@@ -122,7 +124,8 @@ exports.showProportionDetails = (req, res, next) => {
                 pageTitle: 'Szczegoly proporcji',
                 btnLabel: 'Edytuj proporcje',
                 formAction: '/proportion/edit',
-                navLocation: 'proportion'
+                navLocation: 'proportion',
+                validationErrors: null,
             });
 
         });
@@ -136,6 +139,29 @@ exports.addProportion = (req, res, next) => {
     ProportionRepository.createProportion(propData)
         .then(result => {
             res.redirect('/proportion');
+        })
+        .catch(err => {
+            let allDrinks, allIngre;
+            DrinkRepository.getDrinks()
+                .then(drinks => {
+                    allDrinks = drinks;
+                    return IngreadientRepository.getIngreadients();
+                })
+                .then(ingres => {
+                    allIngre = ingres;
+                    res.render('pages/proportion-form', {
+                        proportion: {},
+                        pageTitle: 'Nowa proporcja',
+                        formMode: 'createNew',
+                        allDrinks: allDrinks,
+                        allIngre: allIngre,
+                        btnLabel: 'Dodaj proporcje',
+                        formAction: '/proportion/add',
+                        navLocation: 'proportion',
+                        validationErrors: err.errors,
+                    });
+                });
+
         });
 };
 

@@ -2,7 +2,7 @@
 <main>
     <script type="application/javascript" src="/js/validationProportionForm.js"></script>
     <h2><%= pageTitle %></h2>
-    <form class="form" method="post" action="<%= formAction%>" novalidate onsubmit=" return validateProportion();">
+    <form class="form" method="post" action="<%= formAction%>">
         <input type="hidden" name="_id" value="<%= proportion._id %>">
 
         <label for="drink_id">Drink:<span>* </span></label>
@@ -16,7 +16,14 @@
             <% } %>
         </select>
 
-        <span id="errorDrink" class="errors-text required "></span>
+        <span id="errorDrink" class="errors-text required ">
+            <% if(validationErrors) {
+                if (validationErrors.find(e => e.path.includes('drink_id'))) { %>
+            <%= validationErrors.find(e => e.path.includes('drink_id')).message %>
+            <% }
+             }
+         %>
+        </span>
 
 
         <label for="ingre_id">Skladnik:<span>* </span></label>
@@ -28,18 +35,39 @@
             </option>
             <% } %>
         </select>
-        <span id="errorIngreadient" class="errors-text required "></span>
+        <span id="errorIngreadient" class="errors-text required ">
+            <% if(validationErrors) {
+                if (validationErrors.find(e => e.path.includes('ingre_id'))) { %>
+            <%= validationErrors.find(e => e.path.includes('ingre_id')).message %>
+            <% }
+             }
+         %>
+        </span>
 
 
         <label for="grammage">Gramatura:<span>* </span></label>
         <input type="number" name="grammage" id="grammage" placeholder="liczba dodatnia"
             value="<%= proportion.grammage %>" <%= (formMode == 'showDetails') ? 'disabled' : '' %> />
-        <span id="errorGram" class="errors-text required "></span>
+        <span id="errorGram" class="errors-text required ">
+            <% if(validationErrors) {
+                if (validationErrors.find(e => e.path.includes('grammage'))) { %>
+            <%= validationErrors.find(e => e.path.includes('grammage')).message %>
+            <% }
+             }
+         %>
+        </span>
 
         <label for="costByGrammage">Koszt gramatury:<span>* </span></label>
         <input type="number" name="costByGrammage" id="costByGrammage" placeholder=""
             value="<%= proportion.costByGrammage %>" <%= (formMode == 'showDetails') ? 'disabled' : '' %>>
-        <span id="errorCostByGrammage" class="errors-text required "></span>
+        <span id="errorCostByGrammage" class="errors-text required ">
+            <% if(validationErrors) {
+                if (validationErrors.find(e => e.path.includes('costByGrammage'))) { %>
+            <%= validationErrors.find(e => e.path.includes('costByGrammage')).message %>
+            <% }
+             }
+         %>
+        </span>
 
 
 
