@@ -110,15 +110,18 @@ exports.updateIngreadient = (req, res, next) => {
         .then(result => {
             res.redirect('/ingreadient');
         }).catch(err => {
-            res.render('pages/ingreadient_form', {
-                ingre: ingreData,
-                pageTitle: 'Edycja Skladnika',
-                formMode: 'createNew',
-                btnLabel: 'Edytuj skladnik',
-                formAction: '/ingreadient/add',
-                navLocation: 'ingreadient',
-                validationErrors: err.errors
-            });
+            IngreadientRepository.getIngreadientById(ingreId)
+                .then(ingre => {
+                    res.render('pages/ingreadient_form', {
+                        ingre: ingre,
+                        formMode: 'edit',
+                        pageTitle: 'Edycja skladnika',
+                        btnLabel: 'Edytuj skladnik',
+                        formAction: '/ingreadient/edit',
+                        navLocation: 'ingreadient',
+                        validationErrors: err.errors,
+                    });
+                });
         });
 };
 

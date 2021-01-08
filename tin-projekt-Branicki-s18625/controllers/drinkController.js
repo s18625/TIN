@@ -93,15 +93,18 @@ exports.updateDrink = (req, res, next) => {
             res.redirect('/drinks');
         })
         .catch(err => {
-            res.render('pages/drink_form', {
-                drink: drinkData,
-                pageTitle: 'Edycja Drinka',
-                formMode: 'createNew',
-                btnLabel: 'Edytuj drinka',
-                formAction: '/drinks/add',
-                navLocation: 'drinks',
-                validationErrors: err.errors
-            });
+            DrinkRepository.getDrinkById(drinkId)
+                .then(drink => {
+                    res.render('pages/drink_form', {
+                        drink: drink,
+                        formMode: 'edit',
+                        pageTitle: 'Edycja drinka',
+                        btnLabel: 'Edytuj drinka',
+                        formAction: '/drinks/edit',
+                        navLocation: 'drinks',
+                        validationErrors: err.errors,
+                    });
+                });
         });
 };
 

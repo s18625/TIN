@@ -3,7 +3,9 @@ Projekt na zajecia TIN - Technologie Internetu
  
  Dokumetacja:
  Projek zrobiony podejsciem ORM.
- Po sciagniecu projektu bedac w folderze "TIN-PROJEKT-BRANICKI-S18625" nalezy wpisac polecnie "npm start"
+ Po sciagniecu projektu bedac
+ w folderze docker nalezy odpalic dockera => "docker-compose start"
+ Nastepnie w folderze "TIN-PROJEKT-BRANICKI-S18625" wpisac w konsoli intrukcje "npm start"
  
  ### Languages and Tools:
 

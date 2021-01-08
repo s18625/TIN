@@ -173,26 +173,31 @@ exports.updateProportion = (req, res, next) => {
     ProportionRepository.updateProportion(propId, propData)
         .then(result => {
             res.redirect('/proportion');
-        }).catch(err => {
+        })
+        .catch(err => {
             let allDrinks, allIngre;
             DrinkRepository.getDrinks()
                 .then(drinks => {
                     allDrinks = drinks;
-                    return IngreadientRepository.getIngreadients();
+                    return IngreadientRepository.getIngreadients()
                 })
                 .then(ingres => {
                     allIngre = ingres;
+                    return ProportionRepository.getProportionById(propId)
+                })
+                .then(prop => {
                     res.render('pages/proportion-form', {
-                        proportion: propData,
-                        pageTitle: 'Edycja proporcji',
-                        formMode: 'createNew',
+                        proportion: prop,
+                        formMode: 'edit',
                         allDrinks: allDrinks,
                         allIngre: allIngre,
-                        btnLabel: 'edytuj proporcje',
-                        formAction: '/proportion/add',
+                        pageTitle: 'Edycja proporcji',
+                        btnLabel: 'Edytuj proporcje',
+                        formAction: '/proportion/edit',
                         navLocation: 'proportion',
                         validationErrors: err.errors,
                     });
+
                 });
 
         });
