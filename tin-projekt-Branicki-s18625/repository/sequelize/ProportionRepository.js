@@ -34,7 +34,7 @@ exports.getProportionById = (proportionId) => {
 };
 
 exports.createProportion = (data) => {
-    console.log(JSON.stringify(data));
+    // console.log(JSON.stringify(data));
 
     return Proportion.create({
         drink_id: data.drink_id,

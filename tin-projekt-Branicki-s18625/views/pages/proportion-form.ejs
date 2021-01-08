@@ -11,7 +11,7 @@
             <option value="" selected>--- Wybierz drinka ---</option>
             <% for (let i=0; i<allDrinks.length; i++) { let drink = allDrinks[i]; %>
             <option value="<%= drink._id %>" label="<%= drink.name %>"
-                <%= (proportion._id && drink._id.toString() == proportion.drink._id.toString()) ? 'selected' : ''%>>
+                <%= ( drink._id.toString() == proportion.drink_id) ? 'selected' : ''%>>
             </option>
             <% } %>
         </select>
@@ -31,7 +31,7 @@
             <option value="" selected>--- Wybierz Skladnik ---</option>
             <% for (let i=0; i<allIngre.length; i++) { let ingre = allIngre[i]; %>
             <option value="<%= ingre._id %>" label="<%= ingre.name %>"
-                <%= (proportion._id && ingre._id.toString() == proportion.ingreadient._id.toString()) ? 'selected' : ''%>>
+                <%= ( ingre._id.toString() == proportion.ingre_id) ? 'selected' : ''%>>
             </option>
             <% } %>
         </select>

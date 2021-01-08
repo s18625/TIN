@@ -186,6 +186,7 @@ exports.updateProportion = (req, res, next) => {
                     return ProportionRepository.getProportionById(propId)
                 })
                 .then(prop => {
+
                     res.render('pages/proportion-form', {
                         proportion: prop,
                         formMode: 'edit',

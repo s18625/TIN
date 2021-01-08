@@ -41,7 +41,7 @@ function validateProportion() {
     } else if (!checkNumberRange(gramInput.value, 1, 1000)) {
         valid = false;
         errorResponse += "<br>" + `-pole "Gramatura" zawiera nieprawidlowa wartosc`;
-        ingreadientInput.classList.add("error-input");
+        gramInput.classList.add("error-input");
         errorGram.innerText = "Wartosc pola musi byc z zakresu od 1 do 1000";
     }
 
