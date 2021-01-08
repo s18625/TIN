@@ -43,14 +43,20 @@ const Drink = sequelize.define('Drink', {
                 msg: "Pole jest wymagane"
             },
             len: {
-                args: [2, 60],
-                msg: "Pole powinno zawierać od 2 do 60 znaków"
+                args: [2, 160],
+                msg: "Pole powinno zawierać od 2 do 160 znaków"
             },
         }
     },
     serve: {
         type: Sequelize.STRING,
         allowNull: true,
+        validate: {
+            len: {
+                args: [0, 160],
+                msg: "Pole powinno zawierać maksymlanie 160 znakow"
+            },
+        }
     }
 });
 

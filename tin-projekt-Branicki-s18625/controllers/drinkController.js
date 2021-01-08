@@ -95,9 +95,9 @@ exports.updateDrink = (req, res, next) => {
         .catch(err => {
             res.render('pages/drink_form', {
                 drink: drinkData,
-                pageTitle: 'Nowy Drink',
+                pageTitle: 'Edycja Drinka',
                 formMode: 'createNew',
-                btnLabel: 'Dodaj drinka',
+                btnLabel: 'Edytuj drinka',
                 formAction: '/drinks/add',
                 navLocation: 'drinks',
                 validationErrors: err.errors

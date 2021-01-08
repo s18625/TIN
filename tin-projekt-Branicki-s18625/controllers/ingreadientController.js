@@ -109,8 +109,19 @@ exports.updateIngreadient = (req, res, next) => {
     IngreadientRepository.updateIngreadient(ingreId, ingreData)
         .then(result => {
             res.redirect('/ingreadient');
+        }).catch(err => {
+            res.render('pages/ingreadient_form', {
+                ingre: ingreData,
+                pageTitle: 'Edycja Skladnika',
+                formMode: 'createNew',
+                btnLabel: 'Edytuj skladnik',
+                formAction: '/ingreadient/add',
+                navLocation: 'ingreadient',
+                validationErrors: err.errors
+            });
         });
 };
+
 
 exports.deleteIngreadient = (req, res, next) => {
     const ingreId = req.params.empId;

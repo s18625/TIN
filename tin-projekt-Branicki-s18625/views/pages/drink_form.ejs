@@ -33,7 +33,7 @@
         </span>
 
         <label for="description">Opis:<span>* </span></label>
-        <input type="text" name="description" id="description" placeholder="2-60 znaków"
+        <input type="text" name="description" id="description" placeholder="2-160 znaków"
             value="<%= drink.description %>" <%= (formMode == 'showDetails') ? 'disabled' : '' %>>
         <span id="errorDescription" class="errors-text required ">
             <% if(validationErrors) {
@@ -45,9 +45,18 @@
         </span>
 
 
-        <label for="Podanie">Propozycja podania:</label>
-        <textarea name="serve" id="serve" cols="30" rows="10" value="<%= drink.serve %>"
-            <%= (formMode == 'showDetails') ? 'disabled' : '' %>></textarea>
+        <label for="serve">Propozycja podania:</label>
+        <textarea name="serve" id="serve" <%= (formMode == 'showDetails') ? 'disabled' : '' %>>
+            <%= drink.serve %>
+        </textarea>
+        <span id="errorServe" class="errors-text required ">
+            <% if(validationErrors) {
+            if (validationErrors.find(e => e.path.includes('serve'))) { %>
+            <%= validationErrors.find(e => e.path.includes('serve')).message %>
+            <% }
+            }
+            %>
+        </span>
 
         <div class="form-buttons">
             <p id="errorsSummary" class="errors-text required ">

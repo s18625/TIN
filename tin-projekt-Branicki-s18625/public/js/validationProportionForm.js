@@ -3,11 +3,13 @@ function validateProportion() {
     const drinkInput = document.getElementById('drink_id');
     const ingreadientInput = document.getElementById('ingre_id');
     const gramInput = document.getElementById('grammage');
+    const costByGrammageInput = document.getElementById('costByGrammage');
     // let arrInput = [nameInput, costInput, descriptionInput];
     //////////////////////errors///////////////////////////////////
     const errorDrink = document.getElementById('errorDrink');
     const errorIngreadient = document.getElementById('errorIngreadient');
     const errorGram = document.getElementById('errorGram');
+    const errorCostByGrammage = document.getElementById('errorCostByGrammage');
     const errorsSummary = document.getElementById('errorsSummary');
 
     resetErrors([drinkInput, ingreadientInput, gramInput], [errorDrink, errorIngreadient, errorGram], errorsSummary);
@@ -41,6 +43,18 @@ function validateProportion() {
         errorResponse += "<br>" + `-pole "Gramatura" zawiera nieprawidlowa wartosc`;
         ingreadientInput.classList.add("error-input");
         errorGram.innerText = "Wartosc pola musi byc z zakresu od 1 do 1000";
+    }
+
+    if (!checkRequired(costByGrammageInput.value)) {
+        valid = false;
+        errorResponse += "<br>" + `-pole "Koszt gramatury" nie jest wypelnione`;
+        costByGrammageInput.classList.add("error-input");
+        errorCostByGrammage.innerText = "Pole jest wymagane";
+    } else if (!checkNumberRange(costByGrammageInput.value, 1, 1000)) {
+        valid = false;
+        errorResponse += "<br>" + `-pole "Koszt gramatury" zawiera nieprawidlowa wartosc`;
+        costByGrammageInput.classList.add("error-input");
+        errorCostByGrammage.innerText = "Wartosc pola musi byc z zakresu od 1 do 1000";
     }
 
 
