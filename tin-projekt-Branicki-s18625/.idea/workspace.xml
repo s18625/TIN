@@ -20,11 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="614073b7-490e-4f96-8aa2-8a14466a5c98" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/drinkController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/drinkController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/sequelize/Drink.js" beforeDir="false" afterPath="$PROJECT_DIR$/model/sequelize/Drink.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/validationDrinkForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/validationDrinkForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/pages/drink_form.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/drink_form.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/pages/proportion-form.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/proportion-form.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,6 +100,7 @@
       <workItem from="1609788021604" duration="5439000" />
       <workItem from="1610101869554" duration="501000" />
       <workItem from="1610102448755" duration="514000" />
+      <workItem from="1610362345338" duration="1000" />
     </task>
     <servers />
   </component>
