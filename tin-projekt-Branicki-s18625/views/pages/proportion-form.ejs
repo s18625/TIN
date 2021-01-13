@@ -2,8 +2,7 @@
 <main>
     <script type="application/javascript" src="/js/validationProportionForm.js"></script>
     <h2><%= pageTitle %></h2>
-    <form class="form" method="post" action="<%= formAction%>" novalidate novalidate
-        onsubmit="return validateProportion();">
+    <form class="form" method="post" action="<%= formAction%>" novalidate onsubmit="return validateProportion();">
         <input type="hidden" name="_id" value="<%= proportion._id %>">
 
         <label for="drink_id">Drink:<span>* </span></label>

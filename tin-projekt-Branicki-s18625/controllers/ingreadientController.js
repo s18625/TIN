@@ -112,6 +112,9 @@ exports.updateIngreadient = (req, res, next) => {
         }).catch(err => {
             IngreadientRepository.getIngreadientById(ingreId)
                 .then(ingre => {
+                    ingre.name = ingreData.name;
+                    ingre.costPer100g = ingreData.costPer100g;
+                    ingre.description = ingreData.description;
                     res.render('pages/ingreadient_form', {
                         ingre: ingre,
                         formMode: 'edit',

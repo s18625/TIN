@@ -1,13 +1,13 @@
 Projekt na zajecia TIN - Technologie Internetu
- https://s18625.github.io/TIN/
- 
- Dokumetacja:
- Projek zrobiony podejsciem ORM.
- Po sciagniecu projektu bedac
- w folderze docker nalezy odpalic dockera => "docker-compose start"
- Nastepnie w folderze "TIN-PROJEKT-BRANICKI-S18625" wpisac w konsoli intrukcje "npm start"
- 
- ### Languages and Tools:
+https://s18625.github.io/TIN/
+
+Dokumetacja:
+Projek zrobiony podejsciem ORM z dockerem.
+Po sciagniecu projektu będąc
+w folderze docker nalezy "odpalic" dockera => "docker-compose up"
+Nastepnie w folderze "TIN-PROJEKT-BRANICKI-S18625" wpisac w konsoli intrukcje "npm start"
+
+### Languages and Tools:
 
 <img align="left" alt="Visual Studio Code" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/visual-studio-code/visual-studio-code.png" />
 <img align="left" alt="HTML5" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/html/html.png" />

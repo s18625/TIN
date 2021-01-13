@@ -95,6 +95,10 @@ exports.updateDrink = (req, res, next) => {
         .catch(err => {
             DrinkRepository.getDrinkById(drinkId)
                 .then(drink => {
+                    drink.name = drinkData.name;
+                    drink.prize = drinkData.prize;
+                    drink.description = drinkData.description;
+                    drink.serve = drinkData.serve;
                     res.render('pages/drink_form', {
                         drink: drink,
                         formMode: 'edit',

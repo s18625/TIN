@@ -186,6 +186,9 @@ exports.updateProportion = (req, res, next) => {
                     return ProportionRepository.getProportionById(propId)
                 })
                 .then(prop => {
+                    prop.grammage = propData.grammage;
+                    prop.costByGrammage = propData.costByGrammage;
+
 
                     res.render('pages/proportion-form', {
                         proportion: prop,
