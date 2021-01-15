@@ -32,14 +32,14 @@ const Ingreadient = sequelize.define('Ingreadient', {
                 min: 0,
                 max: 1000,
                 msg: "Pole musi zawierac liczbe z przedzialu 1-1000"
-            },
+            }
 
         }
 
     },
     description: {
         type: Sequelize.STRING,
-        allowNull: false,
+        allowNull: true,
         validate: {
             notEmpty: {
                 msg: "Pole jest wymagane"

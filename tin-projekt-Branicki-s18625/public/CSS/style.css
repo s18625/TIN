@@ -650,6 +650,7 @@ abbr[title='required'] {
 }
 
 .form input.error-input,
+.form textarea.error-input,
 .form select.error-input {
     border: 3px solid #e74c3c
 }
@@ -671,7 +672,7 @@ p.required {
 }
 
 #errorsSummary span span {
-    color: red;
+    color: #FF4500;
 }
 
 /* //=================================================================================== */

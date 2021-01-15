@@ -7,7 +7,10 @@
         <input type="hidden" name="_id" value="<%= drink._id %>">
 
         <label for="name">Nazwa:<span>* </span></label>
-        <input type="text" name="name" id="name" placeholder="2-60 znaków" value="<%= drink.name %>"
+        <input class=<% if(validationErrors) {
+            if (validationErrors.find(e => e.path.includes('name'))) { %> <%= "error-input" %> <% }
+         }
+     %> type="text" name="name" id="name" placeholder="2-60 znaków" value="<%= drink.name %>"
             <%= (formMode == 'showDetails') ? 'disabled' : '' %>>
         <span id="errorName" class="errors-text required ">
             <% if(validationErrors) {
@@ -20,7 +23,10 @@
 
 
         <label for="prize">Cena:<span>* </span></label>
-        <input type="number" name="prize" id="prize" placeholder="liczba dodatnia" value="<%= drink.prize %>"
+        <input class=<% if(validationErrors) {
+            if (validationErrors.find(e => e.path.includes('prize'))) { %> <%= "error-input" %> <% }
+         }
+     %> type="number" name="prize" id="prize" placeholder="liczba dodatnia" value="<%= drink.prize %>"
             <%= (formMode == 'showDetails') ? 'disabled' : '' %>>
 
         <span id="errorCost" class="errors-text required ">
@@ -33,8 +39,13 @@
         </span>
 
         <label for="description">Opis:<span>* </span></label>
-        <input type="text" name="description" id="description" placeholder="2-160 znaków"
-            value="<%= drink.description %>" <%= (formMode == 'showDetails') ? 'disabled' : '' %>>
+
+        <textarea type="text" name="description" id="description" placeholder="2-160 znaków" cols="30" rows="10"
+            <%= (formMode == 'showDetails') ? 'disabled' : '' %> class=<% if(validationErrors) {
+                if (validationErrors.find(e => e.path.includes('description'))) { %> <%= "error-input" %> <% }
+             }
+         %>><%= drink.description %>
+        </textarea>
         <span id="errorDescription" class="errors-text required ">
             <% if(validationErrors) {
                 if (validationErrors.find(e => e.path.includes('description'))) { %>
@@ -46,8 +57,7 @@
 
 
         <label for="serve">Propozycja podania:</label>
-        <textarea name="serve" id="serve" <%= (formMode == 'showDetails') ? 'disabled' : '' %>>
-            <%= drink.serve %>
+        <textarea name="serve" id="serve" <%= (formMode == 'showDetails') ? 'disabled' : '' %>><%= drink.serve %>
         </textarea>
         <span id="errorServe" class="errors-text required ">
             <% if(validationErrors) {
